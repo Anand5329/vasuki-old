@@ -19,6 +19,9 @@ var resize = function() {
     $(".tab").css("min-height", 0)
     uniformTabHeight();
     // console.log("resize");
+
+    // resetting the tab buttons in the navbar
+    $(".navbar-nav").removeClass("solid-bg");
   });
 }
 
