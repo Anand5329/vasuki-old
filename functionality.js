@@ -34,6 +34,29 @@ var uniformTabHeight = function() {
   tab.css("min-height", height);
 }
 
+var uniformCardHeight = function(className) {
+  var cards = $("." + className);
+  var maxHeight = findMaxHeight(cards);
+  console.log(maxHeight);
+  cards.css("min-height", maxHeight);
+}
+
+var findMaxHeight = function(elements) {
+  var maxHeight = -1;
+  // console.log(elements);
+  elements.each(function() {
+    // console.log(this);
+    // console.log(i);
+    var height = $(this).outerHeight();
+    // console.log(height);
+    if (height > maxHeight) {
+      maxHeight = height;
+    }
+  })
+  console.log(maxHeight);
+  return maxHeight;
+};
+
 var getThreshold = function() {
   var doc = $(document);
   var win = $(window);
