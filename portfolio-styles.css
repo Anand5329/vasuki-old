@@ -1,12 +1,25 @@
+.portfolio {
+  margin: 0;
+}
+
 .company {
-  max-width: 18rem;
+  /* width: 16rem; */
   transition: background-image 1s;
-  margin: 1rem;
+  /* margin: 1rem; */
 }
 
 .company:hover {
   color: white;
   background-image: linear-gradient(to bottom, #3A015C, #2E86AB);
+}
+
+.company a {
+  color: black;
+}
+
+.company:hover a{
+  color: white;
+  text-decoration: underline;
 }
 
 .bg-img {

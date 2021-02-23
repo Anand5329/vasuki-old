@@ -2,14 +2,16 @@ let addionics = {
   name: "Addionics",
   country: "United Kingdom",
   description: "Developed a unique electro-printing method to create 3D current collectors for Li-ion batteries enabling energy and power customisation.",
-  status: "current"
+  status: "current",
+  pdf: "#"
 };
 
 let companyB = {
   name: "Company B",
   country: "Country I",
   description: "Revolutionized the sector of ...",
-  status: "current"
+  status: "current",
+  pdf: "example.pdf"
 }
 
 let companyC = {
@@ -40,7 +42,7 @@ var createCurrentList = function() {
 var getCompanyTemplate = function(company) {
   // creating the card
   var card = $("<div></div>");
-  card.addClass(["card", "company"]);
+  card.addClass(["card", "company", "col-12", "col-lg-4"]);
   // card-body
   var cardBody = $("<div></div>");
   cardBody.addClass("card-body");
@@ -48,7 +50,11 @@ var getCompanyTemplate = function(company) {
   //card-title
   var cardTitle = $("<h5></h5>");
   cardTitle.addClass("card-title");
-  cardTitle.append(company.name);
+  var cardLink = $("<a></a>");
+  cardLink.attr("href", company.pdf);
+  cardLink.attr("target", "_blank");
+  cardLink.append(company.name);
+  cardTitle.append(cardLink);
   //card-subtitle
   var cardSubtitle = $("<h6></h6>");
   cardSubtitle.addClass("card-subtitle");
