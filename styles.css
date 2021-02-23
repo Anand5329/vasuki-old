@@ -141,10 +141,10 @@ a {
   background-image: linear-gradient(to bottom right, #F02719, #F1F514);
 }
 
-a:hover {
+/* a:hover {
   color: yellow;
   text-decoration: none;
-}
+} */
 
 .pad {
   padding: 1rem;
@@ -155,9 +155,11 @@ a:hover {
   transition: transform 1s, color 0.5s, background-color 0.5s;
 }
 
-/* .tab:hover {
-  transform: scale(1.1, 1.1);
-} */
+.tab:hover {
+  color: white;
+  background-color: #A11727;
+  box-shadow: 0 4px 8px 0 #6B0F1A;
+}
 
 #portfolio:hover {
   color: white;
@@ -204,9 +206,10 @@ a:hover {
   display: none!important;
 }
 
-/* .about:hover {
-   width: 100%;
-} */
+.about {
+   color: white;
+   background-color: #A11727;
+}
 
 .about-list {
   color: inherit;
