@@ -1,0 +1,27 @@
+.company {
+  max-width: 18rem;
+  transition: background-image 1s;
+  margin: 1rem;
+}
+
+.company:hover {
+  color: white;
+  background-image: linear-gradient(to bottom, #3A015C, #2E86AB);
+}
+
+.bg-img {
+  background-image: url("portfolio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#heading {
+  color: white;
+  background-color: black;
+}
+
+.solid-bg {
+  color: white;
+  background-color: black;
+}
