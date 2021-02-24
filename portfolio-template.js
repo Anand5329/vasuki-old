@@ -40,9 +40,12 @@ var createCurrentList = function() {
 };
 
 var getCompanyTemplate = function(company) {
+  // container col to get sizes right
+  var col = $("<div></div>");
+  col.addClass(["col-12", "col-lg-4", "pad"]);
   // creating the card
   var card = $("<div></div>");
-  card.addClass(["card", "company", "col-12", "col-lg-4"]);
+  card.addClass(["card", "company"]);
   // card-body
   var cardBody = $("<div></div>");
   cardBody.addClass("card-body");
@@ -71,6 +74,6 @@ var getCompanyTemplate = function(company) {
 
   // adding body to card
   card.append(cardBody);
-
-  return card;
+  col.append(card);
+  return col;
 }
