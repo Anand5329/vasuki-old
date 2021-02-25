@@ -150,48 +150,50 @@ a {
   padding: 1rem;
 }
 
-.tab {
+.tab a {
+  color: black;
+  background-color: white;
   display: flex;
   transition: transform 1s, color 0.5s, background-color 0.5s;
 }
 
 .tab:hover {
   color: white;
-  background-color: #A11727;
-  box-shadow: 0 4px 8px 0 #6B0F1A;
+  background-color: #6B3857;
+  box-shadow: 0 4px 8px 0 purple;
 }
 
-#portfolio:hover {
+#portfolio:hover a {
   color: white;
   background-color: #19849F;
   box-shadow: 0 4px 8px 0 #83D7EC;
 }
 
-#updates:hover {
+#updates:hover a {
   color: white;
   background-color: #E9610C;
   box-shadow: 0 4px 8px 0 #FAC19E;
 }
 
-#resolutions:hover {
+#resolutions:hover a {
   color: white;
   background-color: #A61C3C;
   box-shadow: 0 4px 8px 0 #ED96AB;
 }
 
-#pipeline:hover {
+#pipeline:hover a {
   color: white;
   background-color: #CC285A;
   box-shadow: 0 4px 8px 0 #C56DB0;
 }
 
-#info:hover {
+#info:hover a {
   color: white;
   background-color: #2F8C2C;
   box-shadow: 0 4px 8px 0 #86D883;
 }
 
-#committee:hover {
+#committee:hover a {
   color: white;
   background-color: #003249;
   box-shadow: 0 4px 8px 0 #85E0FF;
@@ -208,7 +210,7 @@ a {
 
 .about {
    color: white;
-   background-color: #A11727;
+   background-color: orange;
 }
 
 .about-list {
