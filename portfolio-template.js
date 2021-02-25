@@ -6,6 +6,14 @@ let addionics = {
   pdf: "#"
 };
 
+let companyA = {
+  name: "Company A",
+  country: "Country K",
+  description: "Revolutionized the sector of ...",
+  status: "current",
+  pdf: "example.pdf"
+}
+
 let companyB = {
   name: "Company B",
   country: "Country I",
@@ -21,7 +29,7 @@ let companyC = {
   status: "current"
 }
 
-var companyList = [addionics, companyB, companyC];
+var companyList = [companyA, companyB, companyC];
 
 var doc = $(document);
 
