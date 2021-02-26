@@ -1,3 +1,5 @@
+/* TODO: Add smooth scrolling when jumping. */
+
 .center {
   text-align: center;
   align-items: center;
@@ -45,6 +47,11 @@
   height: 100vh;
   margin-top: -3.5rem;
 }
+
+.scroll-indicator {
+  margin-bottom: -10rem;
+}
+
 /* smaller that large devices: */
 @media (max-width: 992px) {
   #top {
@@ -260,7 +267,7 @@ a {
   background-color: #A61C3C;
 }
 
-#team {
+#recent-updates {
   color: white;
   background-color: #2F8C2C;
 }

@@ -30,13 +30,13 @@
   </head>
 
   <!-- TODO: transition effects for bg gradients -->
-  <!-- TODO: padding space in between companies -->
+  <!-- TODO: Improve functionality of 'View all' button -->
 
   <body>
 
     <!-- navbar -->
     <nav class="navbar navbar-dark navbar-expand-lg justify-content-between sticky-top zero-vertical-pad fix-height">
-      <a class="navbar-brand navbar-font-size mr-auto head" href="#top">V</a>
+      <a class="navbar-brand navbar-font-size mr-auto head" href="index.html">V</a>
 
       <div class="navbar-font-size d-block d-lg-none">
         <ul class="nav dark center">
@@ -59,7 +59,7 @@
       <div class="collapse navbar-collapse navbar-font-size ml-auto" id="navbarNav">
         <ul class="navbar-nav center">
           <li class="nav-item active navbar-tab">
-            <a class="nav-link" href="portfolio.html">Vasuki Portfolio</a>
+            <a class="nav-link" href="#top">Vasuki Portfolio</a>
           </li>
           <li class="nav-item active navbar-tab">
             <a class="nav-link" href="#">Updates</a>
@@ -96,17 +96,30 @@
     <!-- top -->
     <div class="container-fluid center head bg-img" id="top">
       <h1 id="heading">Vasuki Portfolio</h1>
-    </div>
-
-    <div class="container-fluid wrap portfolio pad">
-      <h2 class="center">Current</h2>
-      <div class="row pad" id="current">
+      <div class="container-fluid center scroll-indicator d-none d-lg-block">
+        <i class="fas fa-chevron-down"></i>
       </div>
     </div>
 
-    <div class="container-fluid wrap portfolio pad" id="past">
-      <h2 class="center">Past</h2>
-      <h5 class="center text-muted"><em>No content to show.</em></h5>
+    <div class="container-fluid pad left-align">
+      <button class="btn solid-bg" type="button" data-toggle="collapse" data-target=".collapse-company" aria-expanded="false" aria-controls="current past">View all</button>
+    </div>
+
+    <div class="container-fluid wrap portfolio pad">
+      <a class="btn solid-bg center" data-toggle="collapse" href="#current" role="button" aria-expanded="false" aria-controls="current">
+        <h2 class="center">Current</h2>
+      </a>
+      <div class="row pad center collapse collapse-company" id="current">
+      </div>
+    </div>
+
+    <div class="container-fluid wrap portfolio pad">
+      <a class="btn solid-bg center" data-toggle="collapse" href="#past" role="button" aria-expanded="false" aria-controls="past">
+        <h2 class="center">Past</h2>
+      </a>
+      <div class="row pad center collapse collapse-company" id="past">
+        <h5 class="center text-muted no-content"><em>No content to show.</em></h5>
+      </div>
     </div>
 
     <footer class="">

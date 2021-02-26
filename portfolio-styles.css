@@ -13,6 +13,21 @@
   background-image: linear-gradient(to bottom, #3A015C, #2E86AB);
 }
 
+/* Different colours for companies: */
+
+.red-grad:hover {
+  background-image: linear-gradient(to bottom, #6E0C1D, #B81430);
+}
+
+.blue-grad:hover {
+  background-image: linear-gradient(to bottom, #3A015C, #2E86AB);
+}
+
+.green-grad:hover {
+  background-image: linear-gradient(to bottom, #004F2D, #00B868);
+}
+
+
 .company a {
   color: black;
 }
@@ -23,7 +38,7 @@
 }
 
 .bg-img {
-  background-image: url("portfolio.png");
+  background-image: url("world.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -31,10 +46,19 @@
 
 #heading {
   color: white;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .solid-bg {
   color: white;
-  background-color: black;
+  background-color: #232343;
+}
+
+.btn.solid-bg:hover {
+  color: white;
+}
+
+.left-align {
+  display: flex;
+  justify-content: flex-end;
 }

@@ -3,15 +3,19 @@ let addionics = {
   country: "United Kingdom",
   description: "Developed a unique electro-printing method to create 3D current collectors for Li-ion batteries enabling energy and power customisation.",
   status: "current",
-  pdf: "#"
+  pdf: "#",
+  colour: "blue-grad"
 };
+
+// TODO: Add choosing functionality for colours when creating company card.
 
 let companyA = {
   name: "Company A",
   country: "Country K",
   description: "Revolutionized the sector of ...",
   status: "current",
-  pdf: "example.pdf"
+  pdf: "example.pdf",
+  colour: "green-grad"
 }
 
 let companyB = {
@@ -19,14 +23,17 @@ let companyB = {
   country: "Country I",
   description: "Revolutionized the sector of ...",
   status: "current",
-  pdf: "example.pdf"
+  pdf: "example.pdf",
+  colour: "blue-grad"
 }
 
 let companyC = {
   name: "Company C",
   country: "Country J",
   description: "Revolutionized the sector of ...",
-  status: "current"
+  status: "current",
+  pdf: "example.pdf",
+  colour: "red-grad"
 }
 
 var companyList = [companyA, companyB, companyC];
@@ -40,11 +47,26 @@ doc.ready(function() {
 
 var createCurrentList = function() {
   var currentContainer = $("#current");
+  var emptyFlag = true;
   companyList.forEach((item, i) => {
     if (item.status == "current") {
+      emptyFlag = false;
       currentContainer.append(getCompanyTemplate(item));
     }
   });
+  if (emptyFlag) {
+    currentContainer.append(getNoContentMessage);
+    console.log("No content.")
+  }
+};
+
+var getNoContentMessage = function() {
+  var italics = $("<em></em>");
+  italics.append("No content to show.");
+  var h5 = $("<h5></h5>");
+  h5.addClass(["center", "text-muted"]);
+  h5.append(italics);
+  return h5;
 };
 
 var getCompanyTemplate = function(company) {
@@ -53,7 +75,7 @@ var getCompanyTemplate = function(company) {
   col.addClass(["col-12", "col-lg-4", "pad"]);
   // creating the card
   var card = $("<div></div>");
-  card.addClass(["card", "company"]);
+  card.addClass(["card", "company", company.colour]);
   // card-body
   var cardBody = $("<div></div>");
   cardBody.addClass("card-body");
