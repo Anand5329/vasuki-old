@@ -36,77 +36,95 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-dark navbar-expand-lg justify-content-between sticky-top zero-vertical-pad fix-height">
-      <a class="navbar-brand navbar-font-size mr-auto head" href="index.html">V</a>
+      <a class="navbar-brand navbar-font-size mr-auto head" href="#top">Vasuki</a>
 
-      <div class="navbar-font-size d-block d-lg-none">
+      <div class="navbar-font-size inherit-bg d-block d-lg-none">
         <ul class="nav dark center">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
           </li>
         </ul>
       </div>
 
-      <button class="navbar-toggler" id="navButton" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
+        <button class="navbar-toggler" id="navButton" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
 
       <div class="collapse navbar-collapse navbar-font-size ml-auto" id="navbarNav">
         <ul class="navbar-nav center">
           <li class="nav-item active navbar-tab">
-            <a class="nav-link" href="#top">Vasuki Portfolio</a>
+            <a class="nav-link" href="#about">About Us</a>
           </li>
           <li class="nav-item active navbar-tab">
+            <a class="nav-link" href="portfolio.html">Vasuki Portfolio</a>
+          </li>
+          <li class="nav-item active navbar-tab">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="#">Investment Committee</a>
+          </li>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
             <a class="nav-link" href="#">Updates</a>
           </li>
-          <li class="nav-item active navbar-tab">
+          <li class="nav-item active navbar-tab d-block d-lg-none">
             <a class="nav-link" href="#">Resolutions</a>
           </li>
-          <li class="nav-item active navbar-tab">
-            <a class="nav-link " href="#">Pipeline</a>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="#">Pipeline</a>
           </li>
-          <li class="nav-item active navbar-tab">
-            <a class="nav-link " href="#">Info for Club Members</a>
-          </li>
-          <li class="nav-item active navbar-tab">
-            <a class="nav-link" href="#">Investment Committee</a>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="#">Info for Club Members</a>
           </li>
         </ul>
       </div>
       <div class="navbar-font-size inherit-bg d-none d-lg-block">
         <ul class="nav dark center">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item active dropdown">
+            <button class="btn btn-nav btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right accent-color" id="tabs" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Investment Committee</a>
+              <a class="dropdown-item" href="#">Updates</a>
+              <a class="dropdown-item" href="#">Resolutions</a>
+              <a class="dropdown-item" href="#">Pipeline</a>
+              <a class="dropdown-item" href="#">Info for Club Members</a>
+            </div>
           </li>
         </ul>
       </div>
     </nav>
 
     <!-- top -->
-    <div class="container-fluid center head bg-img" id="top">
-      <h1 id="heading">Vasuki Portfolio</h1>
+    <div class="container-fluid center head bg-img bg-img-world" id="top">
+      <h1 class="heading">Vasuki Portfolio</h1>
       <div class="container-fluid center scroll-indicator d-none d-lg-block">
         <i class="fas fa-chevron-down"></i>
       </div>
     </div>
 
     <div class="container-fluid pad left-align">
-      <button class="btn solid-bg" type="button" data-toggle="collapse" data-target=".collapse-company" aria-expanded="false" aria-controls="current past">View all</button>
+      <button class="btn accent-color" type="button" data-toggle="collapse" data-target=".collapse-company" aria-expanded="false" aria-controls="current past">View all</button>
     </div>
 
     <div class="container-fluid wrap portfolio pad">
-      <a class="btn solid-bg center" data-toggle="collapse" href="#current" role="button" aria-expanded="false" aria-controls="current">
+      <a class="btn accent-color center" data-toggle="collapse" href="#current" role="button" aria-expanded="false" aria-controls="current">
         <h2 class="center">Current</h2>
       </a>
       <div class="row pad center collapse collapse-company" id="current">
@@ -114,7 +132,7 @@
     </div>
 
     <div class="container-fluid wrap portfolio pad">
-      <a class="btn solid-bg center" data-toggle="collapse" href="#past" role="button" aria-expanded="false" aria-controls="past">
+      <a class="btn accent-color center" data-toggle="collapse" href="#past" role="button" aria-expanded="false" aria-controls="past">
         <h2 class="center">Past</h2>
       </a>
       <div class="row pad center collapse collapse-company" id="past">
@@ -123,14 +141,16 @@
     </div>
 
     <footer class="">
-      <div class="container-fluid solid-bg">
+      <div class="container-fluid accent-color">
 
-        <div class="row center">
-          <div class="col-sm-12 col-md-6">Email - vasukigp@vasuki.eu</div>
-
-        </div>
-        <div class="row center">
-          VASUKI 2019 SCSp
+        <div class="row center pad">
+          <div class="col-sm-12 col-md-4">
+            Quick Links
+          </div>
+          <div class="col-sm-12 col-md-4">Our Global Network</div>
+          <div class="col-sm-12 col-md-4">
+            VASUKI 2019 SCSp
+          </div>
         </div>
 
       </div>

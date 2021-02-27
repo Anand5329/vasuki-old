@@ -5,13 +5,56 @@ let rem = root.css("font-size");
 // transition time constant in ms.
 let transitionTime = 500;
 
+// accent colour classes for index page depending on
+let colourClasses = ["solid-bg", "accent-color-green"];
+
+let accentColour = "accent-color";
+
 $(document).ready(function() {
   recolourNavbar();
   uniformTabHeight();
   resize();
   navButtonClick();
-  aboutHover();
+  aboutHover("intent");
+  // carouselUpdate();
 })
+
+var carouselUpdate = function() {
+  var topCarousel = $("#top-carousel");
+  topCarousel.on("slide.bs.carousel", function() {
+    changeAccentColour("accent-color-green");
+  });
+  topCarousel.on("slid.bs.carousel", function() {
+    $(".accent-color-green").each(function() {
+      $(this).removeClass("accent-color-green");
+    });
+    console.log("Removed accent colour.");
+  })
+};
+
+var changeAccentColour = function(colourClass) {
+
+  var accentColourElements = $(".solid-bg");
+  // console.log(accentColourElements);
+  accentColourElements.each(function() {
+    $(this).addClass(colourClass);
+  });
+
+}
+
+var removeClassFromAll = function(className) {
+  $("."+className).each(function() {
+    $(this).removeClass(className);
+  });
+}
+
+var getNextColour = function(colour) {
+
+}
+
+var getPreviousColour = function(colour) {
+
+}
 
 var resize = function() {
   $(window).resize(function() {
@@ -21,7 +64,7 @@ var resize = function() {
     // console.log("resize");
 
     // resetting the tab buttons in the navbar
-    $(".navbar-nav").removeClass("solid-bg");
+    $(".navbar-nav").removeClass(accentColour);
   });
 }
 
@@ -62,7 +105,12 @@ var getThreshold = function() {
   var win = $(window);
   var nav = $(".navbar");
   // getting the heading of the active item of the top carousel.
-  var head = getCurrentItemTopCarousel().find(".heading");
+  var top = getCurrentItemTopCarousel();
+  if (top.length == 0) {
+    top = $("#top");
+  }
+  // console.log(top);
+  var head = top.find(".heading");
   // console.log(head);
 
   //height of the window
@@ -90,18 +138,18 @@ var recolourNavbar = function() {
 
   // if already past, threshold, change instantaneously
   if (doc.scrollTop() > threshold) {
-    nav.addClass("solid-bg");
+    nav.addClass(accentColour);
   }
 
   doc.scroll(function() {
     // pixels that are scrolled down.
     var scroll = doc.scrollTop();
     if (scroll > threshold) {
-      nav.addClass("solid-bg", transitionTime);
+      nav.addClass(accentColour, transitionTime);
       // console.log("Changed colour.");
     }
     if (scroll < threshold) {
-      nav.removeClass("solid-bg", transitionTime);
+      nav.removeClass(accentColour, transitionTime);
     }
     // console.log(scroll - threshold);
   })
@@ -127,24 +175,24 @@ var isMobile = function() {
   var navButtonClick = function() {
     var navButton = $("#navButton");
     navButton.click(function() {
-      $(".navbar-nav").addClass("solid-bg", transitionTime);
+      $(".navbar-nav").addClass(accentColour, transitionTime);
       // console.log("Class added");
       var threshold = getThreshold();
       // console.log(threshold);
       // if before threshold, hide colouring.
       if ($(document).scrollTop() < threshold) {
-        $(".navbar").toggleClass("solid-bg", transitionTime);
+        $(".navbar").toggleClass(accentColour, transitionTime);
         // console.log("Class toggled.");
       }
     })
   }
 
-  var aboutHover = function() {
+  var aboutHover = function(section) {
     var about = $(".about");
-    var ul = createList("intent");
+    var ul = createList(section);
     ul.hide();
     var aboutCard;
-    $("#intent").children(".card-body").append(ul);
+    $("#" + section).children(".card-body").append(ul);
     about.hover(function() {
       // id of the hovered upon card
       var id = $(this).attr("id");
@@ -168,13 +216,6 @@ var isMobile = function() {
     });
   };
 
-  var getCurrentItemTopCarousel = function() {
-    // active is the current item displayed.
-    var active = $("#top-carousel>.carousel-inner>.active");
-    // console.log(active.text());
-    return active;
-  }
-
   var createList = function(aboutId) {
     var ul = $("<ul id='"+aboutId+"-list'></ul>");
     ul.addClass("pad");
@@ -185,4 +226,11 @@ var isMobile = function() {
     });
     return ul;
 
+  }
+
+  var getCurrentItemTopCarousel = function() {
+    // active is the current item displayed.
+    var active = $("#top-carousel>.carousel-inner>.active");
+    // console.log(active.text());
+    return active;
   }

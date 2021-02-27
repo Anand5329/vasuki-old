@@ -37,28 +37,30 @@
 }
 
 .heading {
-  color: black;
+  color: white;
+  display: block;
 }
 
 #top-carousel {
   margin-top: -3.5rem;
 }
 
-.top-height {
+.top-margin {
+  margin-top: 7rem;
+}
+
+.top-carousel-item {
   height: 100vh;
+  flex-direction: column;
 }
 
 .carousel-img {
   width: 100%;
 }
 
-.scroll-indicator {
-  margin-bottom: -10rem;
-}
-
 /* smaller that large devices: */
 @media (max-width: 992px) {
-  .top-height {
+  .top-carousel-item {
     height: 60vh;
   }
 
@@ -98,6 +100,24 @@
   color: #fff;
 }
 
+.btn-nav {
+  background: inherit;
+  color: white;
+}
+
+.btn-nav:hover {
+  background: inherit;
+  color: white;
+}
+
+.dropdown-item {
+  color: inherit;
+}
+
+#dropdownMenuButton::after {
+  content: none;
+}
+
 .fix-height {
   height: 3.5rem;
 }
@@ -118,12 +138,6 @@
   background-color: white;
 }
 
-.accent-color {
-  background-color: #0B3B47;
-  /* background-color: none; */
-  color: white;
-}
-
 .minimalist {
   background-color: white;
 }
@@ -134,12 +148,20 @@
   background-position: center;
 }
 
-.bg-img4 {
-  background-image: url("bg4.jpg");
+.bg-img-circuit-green {
+  background-image: url("Pictures/circuit-green-muted.jpg");
 }
 
-.bg-img3 {
-  background-image: url("bg3.jpg");
+.bg-img-highway {
+  background-image: url("Pictures/highway-muted.jpg");
+}
+
+.bg-img-nodes {
+  background-image: url("Pictures/nodes.jpg");
+}
+
+.bg-img-network {
+  background-image: url("Pictures/network-circle-brown.jpg");
 }
 
 .solid-bg {
@@ -261,6 +283,11 @@ a {
 
 .carousel-button {
   color: #19849F;
+}
+
+.accent-color {
+  background-color: #0B3B47;
+  color: white;
 }
 
 #intent {

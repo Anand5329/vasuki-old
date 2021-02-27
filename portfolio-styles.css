@@ -2,6 +2,23 @@
   margin: 0;
 }
 
+#top {
+  height: 100vh;
+  margin-top: -3.5rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  margin-top: 30rem;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  #top {
+    height: 40vh;
+  }
+}
+
 .company {
   /* width: 16rem; */
   transition: background-image 1s;
@@ -37,11 +54,8 @@
   text-decoration: underline;
 }
 
-.bg-img {
-  background-image: url("world.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.bg-img-world {
+  background-image: url("Pictures/world-muted.jpg");
 }
 
 #heading {
@@ -49,12 +63,12 @@
   /* background-color: black; */
 }
 
-.solid-bg {
+.accent-color {
   color: white;
   background-color: #232343;
 }
 
-.btn.solid-bg:hover {
+.btn.accent-color:hover {
   color: white;
 }
 
