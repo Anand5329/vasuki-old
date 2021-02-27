@@ -37,7 +37,7 @@ var uniformTabHeight = function() {
 var uniformCardHeight = function(className) {
   var cards = $("." + className);
   var maxHeight = findMaxHeight(cards);
-  console.log(maxHeight);
+  // console.log(maxHeight);
   cards.css("min-height", maxHeight);
 }
 
@@ -53,7 +53,7 @@ var findMaxHeight = function(elements) {
       maxHeight = height;
     }
   })
-  console.log(maxHeight);
+  // console.log(maxHeight);
   return maxHeight;
 };
 
@@ -61,7 +61,9 @@ var getThreshold = function() {
   var doc = $(document);
   var win = $(window);
   var nav = $(".navbar");
-  var head = $("#heading");
+  // getting the heading of the active item of the top carousel.
+  var head = getCurrentItemTopCarousel().find(".heading");
+  // console.log(head);
 
   //height of the window
   var winHeight = win.outerHeight();
@@ -69,6 +71,7 @@ var getThreshold = function() {
   var navHeight = nav.outerHeight();
   // position of the heading in the document.
   var headingPos = head.offset().top;
+  // console.log("Heading Pos: " + headingPos);
 
   // threshold at which colour needs to be changed
   // double navHeight: to make sure change happens
@@ -125,8 +128,13 @@ var isMobile = function() {
     var navButton = $("#navButton");
     navButton.click(function() {
       $(".navbar-nav").addClass("solid-bg", transitionTime);
-      if ($(document).scrollTop() < getThreshold()) {
+      // console.log("Class added");
+      var threshold = getThreshold();
+      // console.log(threshold);
+      // if before threshold, hide colouring.
+      if ($(document).scrollTop() < threshold) {
         $(".navbar").toggleClass("solid-bg", transitionTime);
+        // console.log("Class toggled.");
       }
     })
   }
@@ -158,6 +166,13 @@ var isMobile = function() {
       // showing the list only when hovered.
       $("#"+id+"-list").toggle();
     });
+  };
+
+  var getCurrentItemTopCarousel = function() {
+    // active is the current item displayed.
+    var active = $("#top-carousel>.carousel-inner>.active");
+    // console.log(active.text());
+    return active;
   }
 
   var createList = function(aboutId) {

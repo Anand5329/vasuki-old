@@ -36,16 +36,20 @@
   padding: 1rem;
 }
 
-#heading {
+.heading {
   color: black;
 }
 
-#top {
-  /*background-color: #FFFFFF;*/
-  color: #FFFFFF;
-  padding: 5rem;
-  height: 100vh;
+#top-carousel {
   margin-top: -3.5rem;
+}
+
+.top-height {
+  height: 100vh;
+}
+
+.carousel-img {
+  width: 100%;
 }
 
 .scroll-indicator {
@@ -54,8 +58,8 @@
 
 /* smaller that large devices: */
 @media (max-width: 992px) {
-  #top {
-    height: 40vh;
+  .top-height {
+    height: 60vh;
   }
 
 }
@@ -125,10 +129,17 @@
 }
 
 .bg-img {
-  background-image: url("bg4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.bg-img4 {
+  background-image: url("bg4.jpg");
+}
+
+.bg-img3 {
+  background-image: url("bg3.jpg");
 }
 
 .solid-bg {
