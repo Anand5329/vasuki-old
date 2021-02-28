@@ -43,6 +43,7 @@ var doc = $(document);
 doc.ready(function() {
   createCurrentList();
   uniformCardHeight("company");
+  // viewAll();
 });
 
 var createCurrentList = function() {
@@ -107,3 +108,14 @@ var getCompanyTemplate = function(company) {
   col.append(card);
   return col;
 }
+
+var viewAll = function() {
+  $("#view-all-btn").click(function() {
+    var collapsibleElements = $(".collapse-company");
+    collapsibleElements.each(function() {
+      $(this).show();
+      this.style.removeProperty('display');
+      // console.log(this);
+    })
+  });
+};
