@@ -67,6 +67,11 @@ html {
   padding: 1rem;
 }
 
+.mini-head {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
 .heading {
   color: white;
   display: block;
@@ -352,6 +357,10 @@ hr.nav-link {
   padding: 1rem;
 }
 
+.no-pad {
+  padding: 0;
+}
+
 .tab a {
   color: black;
   background-color: white;
@@ -371,6 +380,7 @@ img.member {
 
 .tab {
   width: 25vw;
+  transition: transform 0.2s;
 }
 
 @media (max-width: 992px) {
@@ -380,12 +390,10 @@ img.member {
 
 }
 
-/* .tab:hover {
-  color: white;
-  background-color: #6B3857;
-  box-shadow: 0 4px 8px 0 purple;
-  border-width: 0;
-} */
+.tab:hover {
+  box-shadow: 0 0 1rem #1B0F57!important;
+  transform: translateY(-0.5rem);
+}
 
 .tab a:hover {
   color: #5438DC;
