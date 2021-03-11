@@ -79,6 +79,8 @@ var uniformTabHeight = function() {
 
 var uniformCardHeight = function(className) {
   var cards = $("." + className);
+  // resetting.
+  cards.css("min-height", 0);
   var maxHeight = findMaxHeight(cards);
   // console.log(maxHeight);
   cards.css("min-height", maxHeight);
