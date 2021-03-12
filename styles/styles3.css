@@ -233,10 +233,6 @@ a.back-to-top:hover {
   ul.navbar-nav > li {
     width: 100%;
   }
-
-  .d-lg-flex {
-    display: flex;
-  }
 }
 
 .gen {
