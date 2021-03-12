@@ -63,12 +63,12 @@ html {
 }
 
 .head {
-  font-size: 2rem;
+  font-size: 2.25rem;
   padding: 1rem;
 }
 
 .sub-head {
-  font-size: 1.75rem;
+  font-size: 2rem;
   padding: 1rem;
 }
 
@@ -108,7 +108,7 @@ html {
 }
 
 .back-to-top {
-  background-color: #1B0F57;
+  background-color: #05616F;
   border: 1px solid white;
   color: white;
   font-size: 2.5rem;
@@ -141,18 +141,20 @@ a.back-to-top:hover {
   flex-direction: column;
 }
 
-/* .info-section {
-  height: 70vh;
-} */
+.info-section {
+  min-height: 100vh;
+}
 
 .section {
   padding-top: 4rem;
   padding-bottom: 2rem;
-  border-bottom: #1B0F57 solid 0.5rem;
+  border-bottom: #05616F solid 0.5rem;
+  /* #1B0F57 */
 }
 
 .bottom-border {
-  border-bottom: #1B0F57 solid 0.5rem;
+  border-bottom: #05616F solid 0.5rem;
+  /* #1B0F57 */
 }
 
 .div-text {
@@ -257,7 +259,8 @@ a.back-to-top:hover {
 
 .accent-tab {
   color: white;
-  background-color: #5438DC;
+  background-color: #07B5D4;
+  /* #5438DC; */
   height: 4rem;
 }
 
@@ -335,7 +338,8 @@ hr.nav-link {
 }
 
 .dark-bg {
-  background-color: #1B0F57;
+  background-color: #05616F;
+  /* #1B0F57; */
 }
 
 .dark-bg a, .dark-bg p, .dark-bg .sub-head {
@@ -441,7 +445,7 @@ img.member {
 
 
 .tab {
-  width: 25vw;
+  width: 20vw;
   transition: transform 0.2s;
 }
 
@@ -461,8 +465,18 @@ img.member {
   transform: translateY(-0.5rem);
 }
 
-.tab a:hover {
-  color: #5438DC!important;
+#portfolio a:hover, #committee a:hover {
+  color: #4527D9!important;
+  font-weight: bolder;
+}
+
+#updates a:hover, #info a:hover {
+  color: #07B5D4!important;
+  font-weight: bolder;
+}
+
+#pipeline a:hover, #resolutions a:hover {
+  color: #020E29!important;
   font-weight: bolder;
 }
 
@@ -475,36 +489,36 @@ img.member {
 
 #updates .card-block {
   color: white;
-  background-color: #6C54E1;
+  background-color: #07B5D4;
    /* #2F1B96; */
-  box-shadow: 0 4px 8px 0 #5438DC;
+  box-shadow: 0 4px 8px 0 #05616F;
 }
 
 #pipeline .card-block {
   color: white;
-  background-color: #4527D9;
-  box-shadow: 0 4px 8px 0 #5438DC;
+  background-color: #020E29;
+  box-shadow: 0 4px 8px 0 #000000;
 }
 
 #committee .card-block {
   color: white;
-  background-color: #6C54E1;
+  background-color: #4527D9;
    /* #4527D9; */
   box-shadow: 0 4px 8px 0 #5438DC;
 }
 
 #info .card-block {
   color: white;
-  background-color: #4527D9;
+  background-color: #07B5D4;
    /* #6C54E1; */
-  box-shadow: 0 4px 8px 0 #5438DC;
+  box-shadow: 0 4px 8px 0 #05616F;
 }
 
 #resolutions .card-block {
   color: white;
-  background-color: #6C54E1;
+  background-color: #020E29;
   /* #9D8DEB; */
-  box-shadow: 0 4px 8px 0 #5438DC;
+  box-shadow: 0 4px 8px 0 #000000;
 }
 
 .about {
@@ -521,15 +535,15 @@ img.member {
    background-color: orange;
 }
 
-/* only changing the font size of about cards. */
-#about .card-title {
+/* only changing the font size of about and what we do cards. */
+#what-we-do .card-title, #about .card-title {
   font-size: 2rem;
 }
 
-@media (max-height: 992px) {
+@media (max-width: 992px) {
 
-    #about .card-title {
-      font-size: 1.3rem;
+    #what-we-do .card-title, #about .card-title {
+      font-size: 1.5rem;
     }
 }
 
@@ -580,7 +594,7 @@ img.member {
 .accent-colour,
 .accent-colour a,
 .accent-colour a:hover {
-  color: #5438DC;
+  color: #05616F;
 }
 
 .white-bg {
@@ -600,13 +614,14 @@ img.member {
 
 #partners {
   color: white;
-  background-color: #6C54E1;
+  background-color: #07B5D4;
   /* #2F1B96; */
 }
 
 #focus {
   color: white;
-  background-color: #4527D9;
+  background-color: #020E29;
+  /* #4527D9; */
 }
 
 #recent-updates {
@@ -619,8 +634,16 @@ img.member {
   background-color: white;
 }
 
-.nav-pills .nav-link.active>.card {
+.nav-pills #card-member1.nav-link.active>.card {
   background-color: #5438DC;
+}
+
+.nav-pills #card-member2.nav-link.active>.card {
+  background-color: #07B5D4;
+}
+
+.nav-pills #card-member3.nav-link.active>.card {
+  background-color: #020E29;
 }
 
 .nav-pills .nav-link.card-block {

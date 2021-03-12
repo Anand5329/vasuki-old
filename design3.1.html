@@ -30,7 +30,7 @@
     $(document).ready(function() {
       //TODO: fix uniformCardHeight
       uniformCardHeight("member.card");
-      uniformCardHeight("about.card");
+      uniformCardHeight("about-us.card");
       uniformTabHeight();
       squareTabs();
       resize();
@@ -47,7 +47,7 @@
       $(window).resize(function() {
         squareTabs();
         uniformCardHeight("member.card");
-        uniformCardHeight("about.card");
+        uniformCardHeight("about-us.card");
         //squareElement(".back-to-top");
       });
     };
@@ -150,8 +150,8 @@
 
     <div class="container-fluid pad center even-spaced">
 
-      <div class="card col-lg-3 col-12 pad margin" id="intent">
-        <img class="card-img-top" src="Pictures/picture.png" alt="Card image cap">
+      <div class="about-us card col-lg-3 col-12 pad margin" id="intent">
+        <i class="fas fa-brain icon"></i>
         <div class="card-body">
           <h5 class="card-title">Our Intent</h5>
           <p class="card-text" style="margin-bottom: 0">Lectus vestibulum mattis ullamcorper velit sed.
@@ -159,8 +159,8 @@
         </div>
       </div>
 
-      <div class="card col-lg-3 col-12 pad margin" id="partners">
-        <img class="card-img-top" src="Pictures/picture.png" alt="Card image cap">
+      <div class="about-us card col-lg-3 col-12 pad margin" id="partners">
+        <i class="fas fa-handshake icon"></i>
         <div class="card-body">
           <h5 class="card-title">Our LPs</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur
@@ -168,8 +168,8 @@
         </div>
       </div>
 
-      <div class="card col-lg-3 col-12 pad margin" id="focus">
-        <img class="card-img-top" src="Pictures/picture.png" alt="Card image cap">
+      <div class="about-us card col-lg-3 col-12 pad margin" id="focus">
+        <i class="fas fa-crosshairs icon"></i>
         <div class="card-body">
           <h5 class="card-title">Our Focus Area</h5>
           <p class="card-text">Gravida quis blandit turpis cursus in hac
@@ -181,7 +181,7 @@
 
   </div>
 
-  <!-- Service Tabs -->
+  <!-- What we do Tabs -->
   <div class="container-fluid center wrap section light-bg" id="what-we-do">
 
     <h2 class="sub-head pad">What we do</h2>
@@ -263,13 +263,13 @@
 
   <!-- TODO: Make it so it is possible to populate this section dynamically -->
   <!-- Recent updates -->
-  <div class="container-fluid center wrap bg-img bg-img-optical-fiber pad section info-section" id="recent-updates">
+  <div class="container-fluid center wrap bg-img bg-img-optical-fiber section info-section" id="recent-updates">
 
     <h3 class="sub-head" style="color: white;">Recent Updates</h3>
 
     <div class="container-fluid pad center even-spaced" style="padding: 1rem 5rem;">
 
-      <div class="card col-lg-2 col-12 no-pad margin">
+      <div class="card col-lg-3 col-12 no-pad margin">
         <h4 class="card-header mini-head">Date#1</h4>
         <div class="card-body">
           <h5 class="card-title">An important event</h5>
@@ -277,7 +277,7 @@
         </div>
       </div>
 
-      <div class="card col-lg-2 col-12 no-pad margin">
+      <div class="card col-lg-3 col-12 no-pad margin">
         <h4 class="card-header mini-head">Date#2</h4>
         <div class="card-body">
           <h5 class="card-title">An important milestone</h5>
@@ -285,7 +285,7 @@
         </div>
       </div>
 
-      <div class="card col-lg-2 col-12 no-pad margin">
+      <div class="card col-lg-3 col-12 no-pad margin">
         <h4 class="card-header mini-head">Date#3</h4>
         <div class="card-body">
           <h5 class="card-title">An important oppurtunity</h5>
@@ -310,10 +310,11 @@
         <a class="light-bg nav-link active card-block stretched-link text-decoration-none center" id="card-member1" data-toggle="pill" href="#member1" role="tab" aria-controls="member1" aria-selected="true">
           <div class="card member">
             <div class="card-body wrap">
-              <img class="member circle" src="Pictures/person.jpg" alt="Person icon">
+              <img class="member circle" src="Pictures/vikas.png" alt="Person icon">
               <h5 class="card-title pad">Vikas Sehgal</h5>
               <p>Global Head of Automotive</p>
-              <p>Rothschild & Co</p>
+              <p>Phone: +44 7703 715542</p>
+              <p>Email: vikas.sehgal@rothschildandco.com</p>
             </div>
           </div>
         </a>
@@ -323,10 +324,11 @@
         <a class="light-bg nav-link card-block stretched-link text-decoration-none center" id="card-member2" data-toggle="pill" href="#member2" role="tab" aria-controls="member2" aria-selected="false">
           <div class="card member">
             <div class="card-body">
-              <img class="member circle" src="Pictures/person.jpg" alt="Person icon">
+              <img class="member circle" src="Pictures/heral.png" alt="Person icon">
               <h5 class="card-title pad">Heral Mehta</h5>
               <p>Director</p>
-              <p>Rothschild & Co</p>
+              <p>Phone: +44 7894 814418</p>
+              <p>Email: heral.mehta@rothschildandco.com</p>
             </div>
           </div>
         </a>
@@ -336,10 +338,11 @@
         <a class="light-bg nav-link card-block stretched-link text-decoration-none center" id="card-member3" data-toggle="pill" href="#member3" role="tab" aria-controls="member3" aria-selected="false">
           <div class="card member">
             <div class="card-body">
-              <img class="member circle" src="Pictures/person.jpg" alt="Person icon">
+              <img class="member circle" src="Pictures/ankit.png" alt="Person icon">
               <h5 class="card-title pad">Ankit Mehrotra</h5>
               <p>Assistant Director</p>
-              <p>Rothschild & Co</p>
+              <p>Phone: +44 7443 206963</p>
+              <p>Email: ankit.mehrotra@rothschildandco.com</p>
             </div>
           </div>
         </a>
@@ -383,7 +386,7 @@
 
         <div class="carousel-item active">
           <div class="member center wrap">
-              <img class="member circle" src="Pictures/person.jpg" alt="Person icon">
+              <img class="member circle" src="Pictures/vikas.png" alt="Person icon">
               <h5 class="card-title accent-colour pad">Vikas Sehgal</h5>
               <p class="accent-colour">Global Head of Automotive</p>
               <p class="accent-colour">Rothschild & Co</p>
@@ -397,7 +400,7 @@
 
         <div class="carousel-item">
           <div class="member center wrap">
-              <img class="member circle" src="Pictures/person.jpg" alt="Person icon">
+              <img class="member circle" src="Pictures/heral.png" alt="Person icon">
               <h5 class="card-title accent-colour pad">Heral Mehta</h5>
               <p class="accent-colour">Director</p>
               <p class="accent-colour">Rothschild & Co</p>
@@ -411,7 +414,7 @@
 
         <div class="carousel-item">
             <div class="member center wrap">
-              <img class="member circle" src="Pictures/person.jpg" alt="Person icon">
+              <img class="member circle" src="Pictures/ankit.png" alt="Person icon">
               <h5 class="mini-title accent-colour pad">Ankit Mehrotra</h5>
               <p class="accent-colour">Assistant Director</p>
               <p class="accent-colour">Rothschild & Co</p>
