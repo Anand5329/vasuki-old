@@ -46,6 +46,7 @@ html {
 
 .even-spaced {
   justify-content: space-evenly;
+  align-content: space-between;
 }
 
 .center-item {
@@ -55,6 +56,10 @@ html {
 
 .full {
   width: 100%;
+}
+
+.brand {
+  font-size: 2rem;
 }
 
 .head {
@@ -81,6 +86,42 @@ html {
   position: absolute;
   margin-top: 30rem;
   color: white;
+  font-size: 2.5rem;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.back-to-top {
+  background-color: #1B0F57;
+  border: 1px solid white;
+  color: white;
+  font-size: 2.5rem;
+  position: fixed;
+  bottom: 1rem;
+  z-index: 99;
+  right: 1rem;
+  width: 3rem;
+}
+
+a.back-to-top:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .logo {
@@ -100,9 +141,9 @@ html {
   flex-direction: column;
 }
 
-.info-section {
+/* .info-section {
   height: 70vh;
-}
+} */
 
 .section {
   padding-top: 4rem;
@@ -184,9 +225,17 @@ html {
   flex-grow: 0!important;
 }
 
+#navButton {
+  margin-top: -1rem;
+}
+
 @media (max-width: 992px) {
   ul.navbar-nav > li {
     width: 100%;
+  }
+
+  .d-lg-flex {
+    display: flex;
   }
 }
 
@@ -361,6 +410,10 @@ hr.nav-link {
   padding: 0;
 }
 
+.margin {
+  margin: 1rem 0;
+}
+
 .tab a {
   color: black;
   background-color: white;
@@ -372,11 +425,24 @@ hr.nav-link {
   border-radius: 100%;
 }
 
-
 img.member {
   width: 100%;
+  max-width: 25vw;
   height: auto;
 }
+
+#team-carousel .carousel-control-next,
+#team-carousel .carousel-control-prev {
+  background-color: inherit;
+  color: black;
+  font-size: 3rem;
+}
+
+#team-carousel .carousel-control-next-icon,
+#team-carousel .carousel-control-prev-icon {
+  background-image: none;
+}
+
 
 .tab {
   width: 25vw;
@@ -390,14 +456,59 @@ img.member {
 
 }
 
-.tab:hover {
+.tab .card-block:hover {
+  background-color: white!important;
   box-shadow: 0 0 1rem #1B0F57!important;
+}
+
+.tab:hover {
   transform: translateY(-0.5rem);
 }
 
 .tab a:hover {
-  color: #5438DC;
+  color: #5438DC!important;
   font-weight: bolder;
+}
+
+#portfolio .card-block {
+  color: white;
+  background-color: #4527D9;
+   /* #1F1264; */
+  box-shadow: 0 4px 8px 0 #5438DC;
+}
+
+#updates .card-block {
+  color: white;
+  background-color: #6C54E1;
+   /* #2F1B96; */
+  box-shadow: 0 4px 8px 0 #5438DC;
+}
+
+#pipeline .card-block {
+  color: white;
+  background-color: #4527D9;
+  box-shadow: 0 4px 8px 0 #5438DC;
+}
+
+#committee .card-block {
+  color: white;
+  background-color: #6C54E1;
+   /* #4527D9; */
+  box-shadow: 0 4px 8px 0 #5438DC;
+}
+
+#info .card-block {
+  color: white;
+  background-color: #4527D9;
+   /* #6C54E1; */
+  box-shadow: 0 4px 8px 0 #5438DC;
+}
+
+#resolutions .card-block {
+  color: white;
+  background-color: #6C54E1;
+  /* #9D8DEB; */
+  box-shadow: 0 4px 8px 0 #5438DC;
 }
 
 .about {
@@ -470,28 +581,41 @@ img.member {
   color: white;
 } */
 
+.accent-colour,
+.accent-colour a,
+.accent-colour a:hover {
+  color: #5438DC;
+}
+
 .white-bg {
   background-color: white;
 }
 
+/* #about .card {
+  color: white;
+  background-color: #1B0F57!important;
+} */
+
 #intent {
   color: white;
-  background-color: #19849F;
+  background-color: #4527D9;
+   /* #1B0F57; */
 }
 
 #partners {
   color: white;
-  background-color: #E9610C;
+  background-color: #6C54E1;
+  /* #2F1B96; */
 }
 
 #focus {
   color: white;
-  background-color: #A61C3C;
+  background-color: #4527D9;
 }
 
 #recent-updates {
-  color: white;
-  background-color: #2F8C2C;
+  /* color: white; */
+  /* background-color: #2F8C2C; */
 }
 
 .nav-pills .nav-link.active.card-block {
