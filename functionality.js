@@ -59,7 +59,7 @@ var getPreviousColour = function(colour) {
 var resize = function() {
   $(window).resize(function() {
     // resetting the height in case the dimensions change
-    $(".tab").css("min-height", 0)
+    $(".tab>.card-block").css("min-height", 0)
     uniformTabHeight();
     // console.log("resize");
 
@@ -72,13 +72,13 @@ var uniformTabHeight = function() {
   var infoTab = $("#info");
   var height = infoTab.outerHeight();
   // console.log(height);
-  var tab = $(".tab");
+  var tab = $(".tab>.card-block");
   // making all tabs of uniform height.
   tab.css("min-height", height);
 }
 
 var uniformCardHeight = function(className) {
-  var cards = $("." + className);
+  var cards = $(className);
   // resetting.
   cards.css("min-height", 0);
   var maxHeight = findMaxHeight(cards);
@@ -93,7 +93,7 @@ var findMaxHeight = function(elements) {
     // console.log(this);
     // console.log(i);
     var height = $(this).outerHeight();
-    // console.log(height);
+    console.log(height);
     if (height > maxHeight) {
       maxHeight = height;
     }
