@@ -29,14 +29,14 @@
   <script type="text/javascript">
     $(document).ready(function() {
       //TODO: fix uniformCardHeight
-      uniformCardHeight("member.card");
-      uniformCardHeight("about-us.card");
+      uniformCardHeight(".member.card");
       uniformTabHeight();
       squareTabs();
       resize();
       resize2();
       squareElement(".back-to-top");
       getThreshold();
+      uniformCardHeight(".about-us.card");
     });
 
     var getThreshold = function() {
@@ -46,14 +46,18 @@
     var resize2 = function() {
       $(window).resize(function() {
         squareTabs();
-        uniformCardHeight("member.card");
-        uniformCardHeight("about-us.card");
+        uniformCardHeight(".member.card");
+        uniformCardHeight(".about-us.card");
         //squareElement(".back-to-top");
       });
     };
 
     var squareTabs = function() {
       squareElement(".tab>.card-block");
+      var height = $(".tab>.card-block").outerHeight();
+      $(".tab").each(function() {
+        $(this).css("width", height);
+      })
     }
 
     var squareElement = function(element) {
@@ -182,7 +186,7 @@
   </div>
 
   <!-- What we do Tabs -->
-  <div class="container-fluid center wrap section light-bg" id="what-we-do">
+  <div class="container-fluid center wrap section light-bg fill-height" id="what-we-do">
 
     <h2 class="sub-head pad">What we do</h2>
     <div class="row center">
