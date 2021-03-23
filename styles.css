@@ -366,6 +366,24 @@ a:hover {
   background-color: #2F8C2C;
 }
 
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
 /* centering text within a list item. */
 ul {
   padding:0;

@@ -229,6 +229,12 @@ a.back-to-top:hover {
 
 #navButton {
   margin-top: -1rem;
+  color: black;
+  background-color: inherit;
+}
+
+.nav-correction {
+  margin-top: -0.9rem;
 }
 
 @media (max-width: 992px) {
@@ -279,13 +285,14 @@ a.back-to-top:hover {
 
 .btn-nav {
   background: inherit;
-  color: white;
+  color: black;
 }
 
 .btn-nav:hover {
   background: inherit;
-  color: white;
+  color: black;
 }
+
 
 .dropdown-item {
   color: inherit;

@@ -14,6 +14,7 @@ let companyA = {
   country: "Country K",
   description: "Revolutionized the sector of ...",
   status: "current",
+  pipeline: "evaluation",
   pdf: "example.pdf",
   colour: "green-grad"
 }
@@ -23,6 +24,7 @@ let companyB = {
   country: "Country I",
   description: "Revolutionized the sector of ...",
   status: "current",
+  pipeline: "pre-evaluation",
   pdf: "example.pdf",
   colour: "blue-grad"
 }
@@ -32,6 +34,7 @@ let companyC = {
   country: "Country J",
   description: "Revolutionized the sector of ...",
   status: "current",
+  pipeline: "early",
   pdf: "example.pdf",
   colour: "red-grad"
 }
