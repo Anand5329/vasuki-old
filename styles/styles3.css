@@ -1,4 +1,4 @@
-html {
+fill-heighthtml {
   scroll-behavior: smooth;
 }
 
@@ -141,7 +141,7 @@ a.back-to-top:hover {
   flex-direction: column;
 }
 
-.info-section {
+.fill-height {
   min-height: 100vh;
 }
 
@@ -217,11 +217,6 @@ a.back-to-top:hover {
   }
 
 }
-
-.fill-height {
-  height: 100vh;
-}
-
 
 #navbarNav {
   flex-grow: 0!important;
