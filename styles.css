@@ -384,6 +384,23 @@ a:hover {
   animation-play-state: running;
 }
 
+.overlap {
+  margin-top: -80vh;
+}
+
+.stay-bottom {
+  margin-top: 18rem;
+}
+
+.white-border {
+  border: white solid 1px;
+}
+
+.no-content {
+  color: white!important;
+}
+
+
 /* centering text within a list item. */
 ul {
   padding:0;

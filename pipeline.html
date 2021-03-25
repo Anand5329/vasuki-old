@@ -28,9 +28,23 @@
     <script type="text/javascript" src="carousel-templates.js"></script>
 
     <style media="screen">
+
+      footer {
+        margin-top: 10rem;
+      }
+
+      body {
+        background-color: black;
+      }
+
       .accent-color {
         color: white;
         background-color: #1D201F;
+      }
+
+      .usual-color {
+        color: black;
+        background-color: white;
       }
 
       .tab a {
@@ -54,16 +68,28 @@
         background-color: white;
         border: none;
       }
+
+      .overlap {
+        margin-top: -80vh;
+      }
     </style>
 
     <script type="text/javascript">
 
       $(document).ready(function() {
+        uniformCardHeight(".tab");
         createPipelineList("evaluation");
         createPipelineList("pre-evaluation");
         createPipelineList("early");
         createPipelineList("hold");
+        resize();
       });
+
+      var resize = function() {
+        $(window).resize(function() {
+          uniformCardHeight(".tab");
+        });
+      };
 
       var createPipelineList = function(category) {
         var listContainer = $("#" + category + "-list>.row");
@@ -142,14 +168,14 @@
 
     <!-- top -->
     <div class="container-fluid center head bg-img bg-img-highway" id="top">
-      <h1 class="heading">Pipeline</h1>
-      <div class="container-fluid center scroll-indicator d-none d-lg-block">
+      <h1 class="heading"></h1>
+      <!-- <div class="container-fluid center scroll-indicator d-none d-lg-block">
         <i class="fas fa-chevron-down blink"></i>
-      </div>
+      </div> -->
     </div>
 
     <!-- tabs -->
-    <div class="container-fluid center">
+    <div class="container-fluid center overlap">
 
       <ul class="nav nav-light nav-pills mb-3 light-bg row"
         role="tablist">
@@ -159,8 +185,8 @@
           id="evaluation" data-toggle="pill" href="#evaluation-list" role="tab"
           aria-controls="evaluation-list" aria-selected="false">
             <div class="card tab accent-color">
-              <div class="card-body">
-                <h5 class="card-title">Companies under evaluation</h5>
+              <div class="card-body center">
+                <h5 class="card-title sub-head">Companies under evaluation</h5>
               </div>
             </div>
           </a>
@@ -171,8 +197,8 @@
           id="pre-evaluation" data-toggle="pill" href="#pre-evaluation-list" role="tab"
           aria-controls="pre-evaluation-list" aria-selected="false">
             <div class="card tab accent-color">
-              <div class="card-body">
-                <h5 class="card-title">Companies under pre-evaluation</h5>
+              <div class="card-body center">
+                <h5 class="card-title sub-head">Companies under pre-evaluation</h5>
               </div>
             </div>
           </a>
@@ -183,8 +209,8 @@
           id="early" data-toggle="pill" href="#early-list" role="tab"
           aria-controls="early-list" aria-selected="false">
             <div class="card tab accent-color">
-              <div class="card-body">
-                <h5 class="card-title">Pipeline of early stage startups</h5>
+              <div class="card-body center">
+                <h5 class="card-title sub-head">Pipeline of early stage startups</h5>
               </div>
             </div>
           </a>
@@ -195,8 +221,8 @@
           id="hold" data-toggle="pill" href="#hold-list" role="tab"
           aria-controls="hold-list" aria-selected="false">
             <div class="card tab accent-color">
-              <div class="card-body">
-                <h5 class="card-title">Startups on hold</h5>
+              <div class="card-body center">
+                <h5 class="card-title sub-head">Startups on hold</h5>
               </div>
             </div>
           </a>
@@ -206,25 +232,25 @@
 
       <div class="container-fluid tab-content">
 
-        <div class="tab-pane fade pad" id="evaluation-list" role="tabpanel" aria-labelledby="evaluation">
+        <div class="tab-pane fade pad accent-color" id="evaluation-list" role="tabpanel" aria-labelledby="evaluation">
           <h1 class="sub-head">Companies under evaluation</h1>
           <div class="row center">
           </div>
         </div>
 
-        <div class="tab-pane fade pad" id="pre-evaluation-list" role="tabpanel" aria-labelledby="evaluation">
+        <div class="tab-pane fade pad accent-color" id="pre-evaluation-list" role="tabpanel" aria-labelledby="evaluation">
           <h1 class="sub-head">Companies under pre-evaluation</h1>
           <div class="row center">
           </div>
         </div>
 
-        <div class="tab-pane fade pad" id="early-list" role="tabpanel" aria-labelledby="evaluation">
+        <div class="tab-pane fade pad accent-color" id="early-list" role="tabpanel" aria-labelledby="evaluation">
           <h1 class="sub-head">Pipeline of early stage startups</h1>
           <div class="row center">
           </div>
         </div>
 
-        <div class="tab-pane fade pad" id="hold-list" role="tabpanel" aria-labelledby="evaluation">
+        <div class="tab-pane fade pad accent-color" id="hold-list" role="tabpanel" aria-labelledby="evaluation">
           <h1 class="sub-head">Startups on hold</h1>
           <div class="row center">
           </div>

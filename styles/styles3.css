@@ -662,6 +662,22 @@ img.member {
   padding: 1rem;
 }
 
+.overlap {
+  margin-top: -80vh;
+}
+
+.stay-bottom {
+  margin-top: 11rem;
+}
+
+.white-border {
+  border: white solid 1px;
+}
+
+.no-content {
+  color: white!important;
+}
+
 #contact {
   font-size: 1.2rem;
 }

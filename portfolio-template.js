@@ -44,16 +44,18 @@ var companyList = [companyA, companyB, companyC];
 var doc = $(document);
 
 doc.ready(function() {
-  createCurrentList();
+  createCompanyList("current");
+  createCompanyList("past");
+  createCompanyList("all");
   uniformCardHeight("company");
   // viewAll();
 });
 
-var createCurrentList = function() {
-  var currentContainer = $("#current");
+var createCompanyList = function(category) {
+  var currentContainer = $("#" + category);
   var emptyFlag = true;
   companyList.forEach((item, i) => {
-    if (item.status == "current") {
+    if (item.status == category || category == "all") {
       emptyFlag = false;
       currentContainer.append(getCompanyTemplate(item));
     }
@@ -68,7 +70,7 @@ var getNoContentMessage = function() {
   var italics = $("<em></em>");
   italics.append("No content to show.");
   var h5 = $("<h5></h5>");
-  h5.addClass(["center", "text-muted"]);
+  h5.addClass(["center", "text-muted", "no-content"]);
   h5.append(italics);
   return h5;
 };
@@ -79,7 +81,7 @@ var getCompanyTemplate = function(company) {
   col.addClass(["col-12", "col-lg-4", "pad"]);
   // creating the card
   var card = $("<div></div>");
-  card.addClass(["card", "company", company.colour]);
+  card.addClass(["card", "company", company.colour, "usual-color"]);
   // card-body
   var cardBody = $("<div></div>");
   cardBody.addClass("card-body");
