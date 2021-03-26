@@ -72,6 +72,8 @@ var resize = function() {
 
 var uniformTabHeight = function() {
   var infoTab = $("#info");
+  // resetting.
+  infoTab.css("min-height", 0);
   var height = infoTab.outerHeight();
   // console.log(height);
   var tab = $(".tab>.card-block");
@@ -95,7 +97,7 @@ var findMaxHeight = function(elements) {
     // console.log(this);
     // console.log(i);
     var height = $(this).outerHeight();
-    console.log(height);
+    // console.log(height);
     if (height > maxHeight) {
       maxHeight = height;
     }
@@ -164,24 +166,28 @@ var isMobile = function() {
     var height = $(window).height();
     var ratio = width/height;
 
-      console.log("isMobile: ");
+    // console.log("isMobile: ");
     if(ratio < 1)
     {
-      console.log("true");
+      // console.log("true");
       return true;
     }
     else {
-      console.log("false");
+      // console.log("false");
       return false;
     }
   }
 
   var toMobile = function() {
     $("body").addClass("mobile");
+    resize();
+    resize2();
   };
 
   var toDesktop = function() {
     $("body").removeClass("mobile");
+    resize();
+    resize2();
   }
 
   var checkMobile = function() {

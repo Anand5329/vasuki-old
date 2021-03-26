@@ -489,18 +489,36 @@ img.member {
   transform: translateY(-0.5rem);
 }
 
-#portfolio a:hover, #committee a:hover {
+#portfolio a:hover {
   color: #4527D9!important;
   font-weight: bolder;
 }
 
-#updates a:hover, #info a:hover {
+#updates a:hover {
   color: #07B5D4!important;
+  /* 07B5D4 */
   font-weight: bolder;
 }
 
-#pipeline a:hover, #resolutions a:hover {
+#pipeline a:hover {
   color: #020E29!important;
+  /* 020E29 */
+  font-weight: bolder;
+}
+
+#committee a:hover {
+  color: #D84668!important;
+  /* 4527D9 */
+  font-weight: bolder;
+}
+
+#info a:hover {
+  color: #0DBF9B!important;
+  font-weight: bolder;
+}
+
+#resolutions a:hover {
+  color: #EE6C4D!important;
   font-weight: bolder;
 }
 
@@ -526,22 +544,22 @@ img.member {
 
 #committee .card-block {
   color: white;
-  background-color: #4527D9;
+  background-color: #D84668;
    /* #4527D9; */
   box-shadow: 0 4px 8px 0 #5438DC;
 }
 
 #info .card-block {
   color: white;
-  background-color: #07B5D4;
-   /* #6C54E1; */
+  background-color: #0DBF9B;
+   /* #6C54E1; #07B5D4*/
   box-shadow: 0 4px 8px 0 #05616F;
 }
 
 #resolutions .card-block {
   color: white;
-  background-color: #020E29;
-  /* #9D8DEB; */
+  background-color: #EE6C4D ;
+  /* #9D8DEB; 020E29*/
   box-shadow: 0 4px 8px 0 #000000;
 }
 
@@ -719,7 +737,7 @@ li {
 
   /* mobile view */
 
-.mobile .brand {
+.mobile .brand, .mobile .scroll-indicator {
   font-size: 3rem;
 }
 

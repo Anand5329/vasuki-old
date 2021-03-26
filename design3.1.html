@@ -36,7 +36,9 @@
       resize2();
       squareElement(".back-to-top");
       getThreshold();
-      uniformCardHeight(".about-us.card");
+      setTimeout(function() {
+        uniformCardHeight(".about-us.card");
+      }, 100); // to wait for fav icon to load.
     });
 
     var getThreshold = function() {
@@ -45,6 +47,7 @@
 
     var resize2 = function() {
       $(window).resize(function() {
+        uniformTabHeight();
         squareTabs();
         uniformCardHeight(".member.card");
         uniformCardHeight(".about-us.card");
@@ -390,8 +393,6 @@
           <div class="member center wrap">
               <img class="member circle" src="Pictures/vikas.png" alt="Person icon">
               <h5 class="card-title accent-colour pad">Vikas Sehgal</h5>
-              <p class="accent-colour">Global Head of Automotive</p>
-              <p class="accent-colour">Rothschild & Co</p>
               <p class="accent-colour">Email: <a href="mailto:vikas.sehgal@rothschildandco.com">
                   vikas.sehgal@rothschildandco.com
                 </a></p>
@@ -404,8 +405,6 @@
           <div class="member center wrap">
               <img class="member circle" src="Pictures/heral.png" alt="Person icon">
               <h5 class="card-title accent-colour pad">Heral Mehta</h5>
-              <p class="accent-colour">Director</p>
-              <p class="accent-colour">Rothschild & Co</p>
               <p class="accent-colour">Email: <a href="mailto:heral.mehta@rothschildandco.com">
                   heral.mehta@rothschildandco.com
                 </a></p>
@@ -418,8 +417,6 @@
             <div class="member center wrap">
               <img class="member circle" src="Pictures/ankit.png" alt="Person icon">
               <h5 class="mini-title accent-colour pad">Ankit Mehrotra</h5>
-              <p class="accent-colour">Assistant Director</p>
-              <p class="accent-colour">Rothschild & Co</p>
               <p class="accent-colour">Email: <a href="mailto:ankit.mehrotra@rothschildandco.com">
                   ankit.mehrotra@rothschildandco.com
                 </a></p>
