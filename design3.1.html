@@ -48,6 +48,7 @@
         squareTabs();
         uniformCardHeight(".member.card");
         uniformCardHeight(".about-us.card");
+        squareElement(".back-to-top");
         //squareElement(".back-to-top");
       });
     };
@@ -73,7 +74,7 @@
   <title></title>
 </head>
 
-<body>
+<body class="">
 
   <!-- Back to top button -->
   <a href="#top" class="back-to-top center circle">
@@ -90,7 +91,7 @@
     </a>
 
     <div class="navbar-font-size white-bg d-block d-lg-none" style="margin-top: -0.9rem">
-      <ul class="nav nav-light center fix-height bottom-border">
+      <ul class="nav nav-light center fix-height bottom-border nav-align">
         <li class="nav-item active">
           <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
         </li>
@@ -143,14 +144,14 @@
 
   <div class="container-fluid center section bg-img bg-img-tech top-item" id="top">
     <h1 class="heading">Vasuki</h1>
-    <div class="container-fluid center scroll-indicator d-none d-lg-block">
+    <div class="container-fluid center scroll-indicator">
       <i class="fas fa-chevron-down blink"></i>
     </div>
   </div>
 
   <!-- About Us -->
-  <div class="container-fluid center section fill-height" id="about">
-    <h2 class="sub-head">About Us</h2>
+  <div class="container-fluid center section fill-height bg-img bg-img-car" id="about">
+    <h2 class="sub-head white">About Us</h2>
 
     <div class="container-fluid pad center even-spaced">
 
@@ -269,7 +270,7 @@
   <!-- Recent updates -->
   <div class="container-fluid center wrap bg-img bg-img-optical-fiber section fill-height" id="recent-updates">
 
-    <h3 class="sub-head" style="color: white;">Recent Updates</h3>
+    <h3 class="sub-head white">Recent Updates</h3>
 
     <div class="container-fluid pad center even-spaced" style="padding: 1rem 5rem;">
 
@@ -316,7 +317,6 @@
             <div class="card-body wrap">
               <img class="member circle" src="Pictures/vikas.png" alt="Person icon">
               <h5 class="card-title pad">Vikas Sehgal</h5>
-              <p>Global Head of Automotive</p>
               <p>Phone: +44 7703 715542</p>
               <p>Email: vikas.sehgal@rothschildandco.com</p>
             </div>
@@ -330,7 +330,6 @@
             <div class="card-body">
               <img class="member circle" src="Pictures/heral.png" alt="Person icon">
               <h5 class="card-title pad">Heral Mehta</h5>
-              <p>Director</p>
               <p>Phone: +44 7894 814418</p>
               <p>Email: heral.mehta@rothschildandco.com</p>
             </div>
@@ -344,7 +343,6 @@
             <div class="card-body">
               <img class="member circle" src="Pictures/ankit.png" alt="Person icon">
               <h5 class="card-title pad">Ankit Mehrotra</h5>
-              <p>Assistant Director</p>
               <p>Phone: +44 7443 206963</p>
               <p>Email: ankit.mehrotra@rothschildandco.com</p>
             </div>

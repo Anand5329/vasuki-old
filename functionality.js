@@ -16,6 +16,7 @@ $(document).ready(function() {
   resize();
   navButtonClick();
   aboutHover("intent");
+  checkMobile();
   // carouselUpdate();
 })
 
@@ -62,6 +63,7 @@ var resize = function() {
     $(".tab>.card-block").css("min-height", 0)
     uniformTabHeight();
     // console.log("resize");
+    checkMobile();
 
     // resetting the tab buttons in the navbar
     $(".navbar-nav").removeClass(accentColour);
@@ -173,6 +175,22 @@ var isMobile = function() {
       return false;
     }
   }
+
+  var toMobile = function() {
+    $("body").addClass("mobile");
+  };
+
+  var toDesktop = function() {
+    $("body").removeClass("mobile");
+  }
+
+  var checkMobile = function() {
+    if (isMobile()) {
+      toMobile();
+    } else {
+      toDesktop();
+    }
+  };
 
   var navButtonClick = function() {
     var navButton = $("#navButton");
