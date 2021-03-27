@@ -29,16 +29,19 @@
   <script type="text/javascript">
     $(document).ready(function() {
       //TODO: fix uniformCardHeight
-      uniformCardHeight(".member.card");
       uniformTabHeight();
       squareTabs();
       resize();
       resize2();
       squareElement(".back-to-top");
       getThreshold();
+      // to wait for fav icon to load.
       setTimeout(function() {
         uniformCardHeight(".about-us.card");
-      }, 100); // to wait for fav icon to load.
+      }, 100);
+      setTimeout(function () {
+        uniformCardHeight(".member.card");
+      }, 100);
     });
 
     var getThreshold = function() {
