@@ -86,16 +86,33 @@ html {
 
 .material {
   width: 60%;
+  /* background-color: black; */
+  position: relative;
+}
+
+.translucent-bg {
+  position: absolute;
+  background-color: black;
+  border-radius: 0.5rem;
+  content: "";
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .material p {
   margin: 0;
-  /* TODO: figure out good design. */
+  z-index: 1;
+  position: relative;
 }
 
 .scroll-indicator {
   color: white;
   font-size: 3rem;
+  margin-top: 3rem;
 }
 
 @keyframes blink {
