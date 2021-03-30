@@ -90,13 +90,11 @@
   <!-- navbar -->
   <nav class="navbar navbar-light white-bg navbar-expand-lg bottom-border
   justify-content-between sticky-top zero-vertical-pad fix-height">
-    <!-- TODO: figure out top margin bug in mobile view -->
-    <a class="navbar-brand navbar-font-size mr-auto head" href="#top">
-      <!-- <img src="Pictures/logo.jpeg" alt="logo" class="logo"> -->
+    <a class="navbar-brand navbar-font mr-auto head" href="#top">
       <h1 class="brand"><strong>Vasuki</strong></h1>
     </a>
 
-    <div class="navbar-font-size white-bg d-block d-lg-none" style="margin-top: -0.9rem">
+    <div class="navbar-font white-bg d-block d-lg-none" style="margin-top: -0.9rem">
       <ul class="nav nav-light center fix-height bottom-border nav-align">
         <li class="nav-item active">
           <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
@@ -114,7 +112,7 @@
       <i class="fas fa-bars"></i>
     </button>
 
-    <div class="collapse navbar-collapse white-bg navbar-font-size ml-auto bottom-border" id="navbarNav">
+    <div class="collapse navbar-collapse white-bg navbar-font ml-auto bottom-border" id="navbarNav">
       <ul class="navbar-nav center">
         <li class="nav-item active navbar-tab">
           <a class="nav-link" href="#about">About Us</a>
@@ -128,12 +126,12 @@
         <li class="nav-item active navbar-tab">
           <a class="nav-link" href="#team">Team</a>
         </li>
-        <li class="nav-item active navbar-tab center accent-tab">
+        <li class="nav-item active navbar-tab center accent-tab accent-tab-blue">
           <a class="nav-link" href="#contact">Contact Us</a>
         </li>
       </ul>
     </div>
-    <div class="navbar-font-size inherit-bg d-none d-lg-block">
+    <div class="navbar-font inherit-bg d-none d-lg-block">
       <ul class="nav dark center">
         <li class="nav-item active navbar-tab">
           <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
@@ -149,7 +147,13 @@
   </nav>
 
   <div class="container-fluid center section bg-img bg-img-tech top-item" id="top">
+    <img src="Pictures/logo.png" alt="logo" class="logo">
     <h1 class="heading">Vasuki</h1>
+    <div class="material">
+      <p class="mini-head white">Vasuki is an Investor Club focussed on
+         technologies disrupting the auto and broader industrials and mobility sectors.</p>
+      <p class="mini-head white">An Investor Club set up by the investors, for the investors.</p>
+    </div>
     <div class="container-fluid center scroll-indicator">
       <i class="fas fa-chevron-down blink"></i>
     </div>
@@ -165,8 +169,10 @@
         <i class="fas fa-brain icon"></i>
         <div class="card-body">
           <h5 class="card-title">Our Intent</h5>
-          <p class="card-text" style="margin-bottom: 0">Lectus vestibulum mattis ullamcorper velit sed.
-            Faucibus pulvinar elementum.</p>
+          <p class="card-text" style="margin-bottom: 0">Build a platform that
+            brings together a network of corporate and individual LPs across
+             the autotech and industrials value chain, sub sectors and segments
+             gain access to early stage opportunities.</p>
         </div>
       </div>
 
@@ -174,8 +180,8 @@
         <i class="fas fa-handshake icon"></i>
         <div class="card-body">
           <h5 class="card-title">Our LPs</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor.</p>
+          <p class="card-text">LPs represent the entire value chain from OEMs,
+             Tier 1/ 2 suppliers to distributors.</p>
         </div>
       </div>
 
@@ -183,8 +189,8 @@
         <i class="fas fa-crosshairs icon"></i>
         <div class="card-body">
           <h5 class="card-title">Our Focus Area</h5>
-          <p class="card-text">Gravida quis blandit turpis cursus in hac
-            habitasse. Nullam ac tortor vitae purus.</p>
+          <p class="card-text">We invest globally at all stages from Seed to
+             Series B.</p>
         </div>
       </div>
 
@@ -193,7 +199,7 @@
   </div>
 
   <!-- What we do Tabs -->
-  <div class="container-fluid center wrap section light-bg fill-height" id="what-we-do">
+  <div class="container-fluid center wrap section bg-img bg-img-tunnel fill-height" id="what-we-do">
 
     <h2 class="sub-head pad">What we do</h2>
     <div class="row center">
@@ -324,7 +330,9 @@
               <img class="member circle" src="Pictures/vikas.png" alt="Person icon">
               <h5 class="card-title pad">Vikas Sehgal</h5>
               <p>Phone: +44 7703 715542</p>
-              <p>Email: vikas.sehgal@rothschildandco.com</p>
+              <p>Email:
+                  vikas.sehgal@rothschildandco.com
+              </p>
             </div>
           </div>
         </a>
@@ -363,27 +371,27 @@
         <div class="desc-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p>Email: <a href="mailto:vikas.sehgal@rothschildandco.com">
+          <!-- <p>Email: <a href="mailto:vikas.sehgal@rothschildandco.com">
               vikas.sehgal@rothschildandco.com
-            </a></p>
+            </a></p> -->
         </div>
       </div>
       <div class="tab-pane fade" id="member2" role="tabpanel" aria-labelledby="card-member2">
         <div class="desc-text">
           <p>At tellus at urna condimentum mattis pellentesque id.
             Ullamcorper malesuada proin libero nunc consequat.</p>
-          <p>Email: <a href="mailto:heral.mehta@rothschildandco.com">
+          <!-- <p>Email: <a href="mailto:heral.mehta@rothschildandco.com">
               heral.mehta@rothschildandco.com
-            </a></p>
+            </a></p> -->
         </div>
       </div>
       <div class="tab-pane fade" id="member3" role="tabpanel" aria-labelledby="card-member3">
         <div class="desc-text">
           <p>Arcu ac tortor dignissim convallis aenean et tortor.
             Lectus mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-          <p>Email: <a href="mailto:ankit.mehrotra@rothschildandco.com">
+          <!-- <p>Email: <a href="mailto:ankit.mehrotra@rothschildandco.com">
               ankit.mehrotra@rothschildandco.com
-            </a></p>
+            </a></p> -->
         </div>
       </div>
     </div>

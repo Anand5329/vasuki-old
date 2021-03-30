@@ -69,7 +69,7 @@ html {
 
 .sub-head {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding: 1rem;
 }
 
@@ -79,15 +79,23 @@ html {
 }
 
 .heading {
+  font-size: 3.5rem;
   color: white;
   display: block;
 }
 
+.material {
+  width: 60%;
+}
+
+.material p {
+  margin: 0;
+  /* TODO: figure out good design. */
+}
+
 .scroll-indicator {
-  position: absolute;
-  margin-top: 30rem;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 @keyframes blink {
@@ -126,7 +134,7 @@ a.back-to-top:hover {
 }
 
 .logo {
-  height: 5%;
+  max-height: 25vh;
 }
 
 .top-margin {
@@ -267,8 +275,9 @@ a.back-to-top:hover {
   /* display: block; */
 }
 
-.navbar-font-size {
-  font-size: 1.3rem;
+.navbar-font {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .inherit-bg {
@@ -276,10 +285,23 @@ a.back-to-top:hover {
   /*transition: background-color 0.25s;*/
 }
 
-.accent-tab {
+.accent-tab-blue {
   color: white;
   background-color: #07B5D4;
   /* #5438DC; */
+  height: 4rem;
+}
+
+.accent-tab-black {
+  color: white;
+  background-color: #020E29;
+  /* #5438DC; */
+  height: 4rem;
+}
+
+.accent-tab-purple {
+  color: white;
+  background-color: #5438DC;
   height: 4rem;
 }
 
@@ -372,8 +394,20 @@ hr.nav-link {
   background-position: center;
 }
 
+.bg-img-traffic {
+  background-image: url("../Pictures/traffic.jpg");
+}
+
+.bg-img-tunnel {
+  background-image: url("../Pictures/tunnel-sat.jpg");
+}
+
+.bg-img-system {
+  background-image: url("../Pictures/system.jpg");
+}
+
 .bg-img-circuit-green {
-  background-image: url("../../Pictures/circuit-green-muted.jpg");
+  background-image: url("../Pictures/circuit-green-muted.jpg");
 }
 
 .bg-img-highway {
@@ -405,7 +439,7 @@ hr.nav-link {
 }
 
 .bg-img-car {
-  background-image: url("../Pictures/car-muted.jpg");
+  background-image: url("../Pictures/car-muted-accent.jpg");
 }
 
 .solid-bg {
@@ -582,6 +616,11 @@ img.member {
   font-size: 2rem;
 }
 
+#team .card-title {
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
 @media (max-width: 992px) {
 
     #what-we-do .card-title, #about .card-title {
@@ -674,9 +713,14 @@ img.member {
 .nav-pills .nav-link.active.card-block {
   color: white;
   background-color: white;
+  border: black solid 2px;
 }
 
 .nav-pills #card-member1.nav-link.active>.card {
+  background-color: #5438DC;
+}
+
+.nav-pills #card-member1.nav-link>.card {
   background-color: #5438DC;
 }
 
@@ -684,12 +728,20 @@ img.member {
   background-color: #07B5D4;
 }
 
+.nav-pills #card-member2.nav-link>.card {
+  background-color: #07B5D4;
+}
+
 .nav-pills #card-member3.nav-link.active>.card {
   background-color: #020E29;
 }
 
+.nav-pills #card-member3.nav-link>.card {
+  background-color: #020E29;
+}
+
 .nav-pills .nav-link.card-block {
-  color: black;
+  color: white;
   background-color: white;
 }
 
@@ -741,7 +793,7 @@ li {
   font-size: 3rem;
 }
 
-.mobile .navbar-font-size, .mobile #navButton {
+.mobile .navbar-font, .mobile #navButton {
   font-size: 2.5rem;
 }
 
@@ -788,4 +840,8 @@ li {
 .mobile .back-to-top {
   font-size: 5rem;
   width: 8rem;
+}
+
+.mobile .material {
+  width: 100%;
 }
