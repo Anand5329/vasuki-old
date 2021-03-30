@@ -710,39 +710,55 @@ img.member {
   /* background-color: #2F8C2C; */
 }
 
+.nav-pills .nav-item {
+  padding: 1rem;
+}
+
 .nav-pills .nav-link.active.card-block {
   color: white;
   background-color: white;
-  border: black solid 2px;
+  border: #05616F solid 2px;
 }
 
-.nav-pills #card-member1.nav-link.active>.card {
+.nav-pills #card-member1.nav-link+.card {
   background-color: #5438DC;
 }
 
-.nav-pills #card-member1.nav-link>.card {
-  background-color: #5438DC;
-}
-
-.nav-pills #card-member2.nav-link.active>.card {
+.nav-pills #card-member2.nav-link+.card {
   background-color: #07B5D4;
 }
 
-.nav-pills #card-member2.nav-link>.card {
-  background-color: #07B5D4;
-}
-
-.nav-pills #card-member3.nav-link.active>.card {
+.nav-pills #card-member3.nav-link+.card {
   background-color: #020E29;
 }
 
-.nav-pills #card-member3.nav-link>.card {
-  background-color: #020E29;
-}
-
-.nav-pills .nav-link.card-block {
+.nav-pills .nav-link+.card {
   color: white;
   background-color: white;
+}
+
+.nav-pills .nav-link+.card a {
+  color: white;
+  font-weight: bold;
+}
+
+#card-member1, #card-member2, #card-member3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.member .card-body {
+  position: relative;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.member .card-body a {
+  pointer-events: all;
 }
 
 .social, .white {
