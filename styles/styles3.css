@@ -163,7 +163,7 @@ a.back-to-top:hover {
 }
 
 .top-item {
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -208,9 +208,9 @@ a.back-to-top:hover {
 
 /* smaller that large devices: */
 @media (max-width: 992px) {
-  .top-item {
-    height: 60vh;
-  }
+  /* .top-item {
+    min-height: 60vh;
+  } */
 
   .right-push {
     margin-left: 0;
@@ -851,6 +851,10 @@ li {
 
 .mobile .nav .nav-link {
   padding: 0 2rem;
+}
+
+.mobile .nav-align {
+  margin-top: 0.9rem;
 }
 
 .mobile .heading {
