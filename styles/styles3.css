@@ -869,6 +869,10 @@ li {
   font-size: 3rem!important;
 }
 
+.mobile .card-subtitle {
+  font-size: 2rem!important;
+}
+
 .mobile #what-we-do .card-title {
   font-size: 2.5rem!important;
 }

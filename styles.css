@@ -48,7 +48,8 @@ html {
 }
 
 .sub-head {
-  font-size: 1.75rem;
+  font-weight: bold;
+  font-size: 3rem;
   padding: 1rem;
 }
 
@@ -65,6 +66,10 @@ html {
 
 .logo {
   height: 5%;
+}
+
+.brand {
+  font-size: 2rem;
 }
 
 
@@ -463,6 +468,10 @@ font-size: 4rem;
 
 .mobile .card-title {
 font-size: 3rem!important;
+}
+
+.mobile .card-subtitle {
+  font-size: 2rem!important;
 }
 
 .mobile #top {
