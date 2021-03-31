@@ -90,6 +90,30 @@ var uniformCardHeight = function(className) {
   cards.css("min-height", maxHeight);
 }
 
+var uniformCardHeightImp = function(selector) {
+  var heights = new Array();
+
+		// Loop to get all element heights
+		$(selector).each(function() {
+
+			// Need to let sizes be whatever they want so no overflow on resize
+			$(this).css('min-height', '0');
+			$(this).css('max-height', 'none');
+			$(this).css('height', 'auto');
+
+			// Then add size (no units) to array
+	 		heights.push($(this).height());
+		});
+
+		// Find max height of all elements
+		var max = Math.max.apply( Math, heights );
+
+		// Set all heights to max height
+		$(selector).each(function() {
+			$(this).css('height', max + 'px');
+		});	
+};
+
 var findMaxHeight = function(elements) {
   var maxHeight = -1;
   // console.log(elements);
