@@ -35,9 +35,11 @@
       resize2();
       squareElement(".back-to-top");
       getThreshold();
-      uniformCardHeight(".about-us.card");
-      uniformCardHeight("#recent-updates .card");
-      uniformCardHeight(".member.card");
+      setTimeout(function() {
+        uniformCardHeight(".about-us.card");
+        uniformCardHeight("#recent-updates .card");
+        uniformCardHeight(".member.card");
+      }, 100);
 
       window.onload = function() {
         uniformCardHeight(".about-us.card");
