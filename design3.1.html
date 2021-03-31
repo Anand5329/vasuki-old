@@ -38,8 +38,7 @@
       // to wait for fav icon to load.
       setTimeout(function() {
         uniformCardHeight(".about-us.card");
-      }, 100);
-      setTimeout(function() {
+        uniformCardHeight("#recent-updates .card");
         uniformCardHeight(".member.card");
       }, 100);
     });
@@ -54,6 +53,7 @@
         squareTabs();
         uniformCardHeight(".member.card");
         uniformCardHeight(".about-us.card");
+        uniformCardHeight("#recent-updates .card");
         squareElement(".back-to-top");
         //squareElement(".back-to-top");
       });
@@ -154,7 +154,7 @@
       </div>
       <p class="mini-head white">Vasuki is an Investor Club focussed on
         technologies disrupting the auto and broader industrials and mobility sectors.</p>
-      <p class="mini-head white">An Investor Club set up by the investors, for the investors.</p>
+      <p class="mini-head white">It is a Club set up by the investors, for the investors.</p>
     </div>
     <div class="container-fluid center scroll-indicator">
       <i class="fas fa-chevron-down blink"></i>
@@ -201,13 +201,13 @@
   </div>
 
   <!-- What we do Tabs -->
-  <div class="container-fluid center wrap section bg-img bg-img-tunnel fill-height" id="what-we-do">
+  <div class="container-fluid center wrap section bg-img bg-img-circuit-green fill-height" id="what-we-do">
 
-    <h2 class="sub-head pad">What we do</h2>
+    <h2 class="sub-head white pad">What we do</h2>
     <div class="row center">
 
       <div class="col-md-4 col-12 pad center">
-        <div class="card tab circle shadow" id="portfolio">
+        <div class="card tab circle" id="portfolio">
           <a class="card-block circle stretched-link text-decoration-none center" href="portfolio.html">
             <div class="card-body center wrap">
               <i class="fas fa-chart-pie icon"></i>
@@ -218,7 +218,7 @@
       </div>
 
       <div class="col-md-4 col-12 pad center">
-        <div class="card tab circle shadow" id="updates">
+        <div class="card tab circle" id="updates">
           <a class="card-block circle stretched-link text-decoration-none center" href="updates.html">
             <div class="card-body">
               <i class="fas fa-sync-alt icon"></i>
@@ -229,7 +229,7 @@
       </div>
 
       <div class="col-md-4 col-12 pad center">
-        <div class="card tab circle shadow" id="pipeline">
+        <div class="card tab circle" id="pipeline">
           <a class="card-block circle stretched-link text-decoration-none center" href="pipeline.html">
             <div class="card-body">
               <i class="fas fa-network-wired icon"></i>
@@ -244,7 +244,7 @@
     <div class="row center">
 
       <div class="col-md-4 col-12 pad center">
-        <div class="card tab circle shadow" id="committee">
+        <div class="card tab circle" id="committee">
           <a class="card-block circle stretched-link text-decoration-none center" href="#">
             <div class="card-body">
               <i class="fas fa-users icon"></i>
@@ -255,7 +255,7 @@
       </div>
 
       <div class="col-md-4 col-12 pad center">
-        <div class="card tab circle shadow" id="info">
+        <div class="card tab circle" id="info">
           <a class="card-block circle stretched-link text-decoration-none center" href="#">
             <div class="card-body">
               <i class="fas fa-info-circle icon"></i>
@@ -266,7 +266,7 @@
       </div>
 
       <div class="col-md-4 col-12 pad center">
-        <div class="card tab circle shadow" id="resolutions">
+        <div class="card tab circle" id="resolutions">
           <a class="card-block circle stretched-link text-decoration-none center" href="#">
             <div class="card-body">
               <i class="fas fa-file-alt icon"></i>
@@ -282,13 +282,13 @@
 
   <!-- TODO: Make it so it is possible to populate this section dynamically -->
   <!-- Recent updates -->
-  <div class="container-fluid center wrap bg-img bg-img-optical-fiber section fill-height" id="recent-updates">
+  <div class="container-fluid center wrap bg-img bg-img-system section fill-height" id="recent-updates">
 
     <h3 class="sub-head white">Recent Updates</h3>
 
     <div class="container-fluid pad center even-spaced" style="padding: 1rem 5rem;">
 
-      <div class="card col-lg-3 col-12 no-pad margin">
+      <div class="card col-lg-3 col-12 no-pad margin" id="news1">
         <h4 class="card-header mini-head">Date#1</h4>
         <div class="card-body">
           <h5 class="card-title">An important event</h5>
@@ -296,7 +296,7 @@
         </div>
       </div>
 
-      <div class="card col-lg-3 col-12 no-pad margin">
+      <div class="card col-lg-3 col-12 no-pad margin" id="news2">
         <h4 class="card-header mini-head">Date#2</h4>
         <div class="card-body">
           <h5 class="card-title">An important milestone</h5>
@@ -304,7 +304,7 @@
         </div>
       </div>
 
-      <div class="card col-lg-3 col-12 no-pad margin">
+      <div class="card col-lg-3 col-12 no-pad margin" id="news3">
         <h4 class="card-header mini-head">Date#3</h4>
         <div class="card-body">
           <h5 class="card-title">An important oppurtunity</h5>
@@ -319,19 +319,19 @@
 
   <!-- Team -->
 
-  <div class="container-fluid center wrap section light-bg" id="team">
+  <div class="container-fluid center wrap section light-bg bg-img bg-img-ai" id="team">
 
-    <h2 class="sub-head">Our Team</h2>
+    <h2 class="sub-head white">Our Team</h2>
 
-    <ul class="nav nav-light nav-pills mb-3 light-bg row d-none d-lg-flex" id="pills-tab" role="tablist">
+    <ul class="nav nav-light nav-pills mb-3 row d-none d-lg-flex" id="pills-tab" role="tablist">
 
       <li class="nav-item position-relative col-12 col-lg-4">
-        <a class="light-bg nav-link active card-block stretched-link
+        <a class="nav-link active card-block stretched-link
         text-decoration-none center" id="card-member1" data-toggle="pill" href="#member1" role="tab" aria-controls="member1" aria-selected="true"></a>
         <div class="card member">
           <div class="card-body wrap">
             <img class="member circle" src="Pictures/vikas.png" alt="Person icon">
-            <h5 class="card-title pad">Vikas Sehgal</h5>
+            <h5 class="card-title pad">Vikas Sehgal <a href=""><i class="fab fa-linkedin"></i></a></h5>
             <p>Phone: +44 7703 715542</p>
             <p>Email:
               <a href="mailto:vikas.sehgal@rothschildandco.com">
@@ -343,12 +343,12 @@
       </li>
 
       <li class="nav-item position-relative col-12 col-lg-4">
-        <a class="light-bg nav-link card-block stretched-link text-decoration-none
+        <a class="nav-link card-block stretched-link text-decoration-none
         center" id="card-member2" data-toggle="pill" href="#member2" role="tab" aria-controls="member2" aria-selected="false"></a>
         <div class="card member">
           <div class="card-body">
             <img class="member circle" src="Pictures/heral.png" alt="Person icon">
-            <h5 class="card-title pad">Heral Mehta</h5>
+            <h5 class="card-title pad">Heral Mehta <a href=""><i class="fab fa-linkedin"></i></a></h5>
             <p>Phone: +44 7894 814418</p>
             <p>Email:
               <a href="mailto:heral.mehta@rothschildandco.com">
@@ -360,12 +360,12 @@
       </li>
 
       <li class="nav-item position-relative col-lg-4 col-12">
-        <a class="light-bg nav-link card-block stretched-link text-decoration-none
+        <a class="nav-link card-block stretched-link text-decoration-none
          center" id="card-member3" data-toggle="pill" href="#member3" role="tab" aria-controls="member3" aria-selected="false"></a>
         <div class="card member">
           <div class="card-body">
             <img class="member circle" src="Pictures/ankit.png" alt="Person icon">
-            <h5 class="card-title pad">Ankit Mehrotra</h5>
+            <h5 class="card-title pad">Ankit Mehrotra <a href=""><i class="fab fa-linkedin"></i></a></h5>
             <p>Phone: +44 7443 206963</p>
             <p>Email:
               <a href="mailto:ankit.mehrotra@rothschildandco.com">
@@ -381,29 +381,17 @@
     <div class="tab-content d-none d-lg-flex " id="pills-tabContent">
       <div class="tab-pane fade show active" id="member1" role="tabpanel" aria-labelledby="card-member1">
         <div class="desc-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <!-- <p>Email: <a href="mailto:vikas.sehgal@rothschildandco.com">
-              vikas.sehgal@rothschildandco.com
-            </a></p> -->
+
         </div>
       </div>
       <div class="tab-pane fade" id="member2" role="tabpanel" aria-labelledby="card-member2">
         <div class="desc-text">
-          <p>At tellus at urna condimentum mattis pellentesque id.
-            Ullamcorper malesuada proin libero nunc consequat.</p>
-          <!-- <p>Email: <a href="mailto:heral.mehta@rothschildandco.com">
-              heral.mehta@rothschildandco.com
-            </a></p> -->
+
         </div>
       </div>
       <div class="tab-pane fade" id="member3" role="tabpanel" aria-labelledby="card-member3">
         <div class="desc-text">
-          <p>Arcu ac tortor dignissim convallis aenean et tortor.
-            Lectus mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-          <!-- <p>Email: <a href="mailto:ankit.mehrotra@rothschildandco.com">
-              ankit.mehrotra@rothschildandco.com
-            </a></p> -->
+
         </div>
       </div>
     </div>
@@ -415,36 +403,36 @@
         <div class="carousel-item active">
           <div class="member center wrap">
             <img class="member circle" src="Pictures/vikas.png" alt="Person icon">
-            <h5 class="card-title accent-colour pad">Vikas Sehgal</h5>
-            <p class="accent-colour">Email: <a href="mailto:vikas.sehgal@rothschildandco.com">
+            <h5 class="card-title white pad">Vikas Sehgal <a href=""><i class="fab fa-linkedin"></i></a></h5>
+            <p class="white">Email: <a class="social" href="mailto:vikas.sehgal@rothschildandco.com">
                 vikas.sehgal@rothschildandco.com
               </a></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
           </div>
         </div>
 
         <div class="carousel-item">
           <div class="member center wrap">
             <img class="member circle" src="Pictures/heral.png" alt="Person icon">
-            <h5 class="card-title accent-colour pad">Heral Mehta</h5>
-            <p class="accent-colour">Email: <a href="mailto:heral.mehta@rothschildandco.com">
+            <h5 class="card-title white pad">Heral Mehta <a href=""><i class="fab fa-linkedin"></i></a></h5>
+            <p class="white">Email: <a class="social" href="mailto:heral.mehta@rothschildandco.com">
                 heral.mehta@rothschildandco.com
               </a></p>
-            <p>At tellus at urna condimentum mattis pellentesque id.
-              Ullamcorper malesuada proin libero nunc consequat.</p>
+            <!-- <p>At tellus at urna condimentum mattis pellentesque id.
+              Ullamcorper malesuada proin libero nunc consequat.</p> -->
           </div>
         </div>
 
         <div class="carousel-item">
           <div class="member center wrap">
             <img class="member circle" src="Pictures/ankit.png" alt="Person icon">
-            <h5 class="card-title accent-colour pad">Ankit Mehrotra</h5>
-            <p class="accent-colour">Email: <a href="mailto:ankit.mehrotra@rothschildandco.com">
+            <h5 class="card-title white pad">Ankit Mehrotra <a href=""><i class="fab fa-linkedin"></i></a></h5>
+            <p class="white">Email: <a class="social" href="mailto:ankit.mehrotra@rothschildandco.com">
                 ankit.mehrotra@rothschildandco.com
               </a></p>
-            <p>Arcu ac tortor dignissim convallis aenean et tortor.
-              Lectus mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+            <!-- <p>Arcu ac tortor dignissim convallis aenean et tortor.
+              Lectus mauris ultrices eros in cursus turpis massa tincidunt dui.</p> -->
           </div>
         </div>
 
