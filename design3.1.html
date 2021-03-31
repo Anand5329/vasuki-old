@@ -36,15 +36,21 @@
       squareElement(".back-to-top");
       getThreshold();
       // to wait for fav icon to load.
-      setTimeout(function() {
-        uniformCardHeightImp(".about-us.card");
-      }, 200);
-      setTimeout(function() {
-        uniformCardHeightImp("#recent-updates .card");
-      }, 200);
-      setTimeout(function() {
-        uniformCardHeightImp(".member.card");
-      }, 200);
+      // setTimeout(function() {
+      //   uniformCardHeightImp(".about-us.card");
+      // }, 200);
+      // setTimeout(function() {
+      //   uniformCardHeightImp("#recent-updates .card");
+      // }, 200);
+      // setTimeout(function() {
+      //   uniformCardHeightImp(".member.card");
+      // }, 200);
+
+      $(window).load(function() {
+        uniformCardHeight(".about-us.card");
+        uniformCardHeight("#recent-updates .card");
+        uniformCardHeight(".member.card");
+      })
     });
 
     var getThreshold = function() {
