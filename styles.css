@@ -2,6 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.white {
+  color: white;
+}
+
+#top {
+  padding-top: 5rem;
+}
+
 .center {
   text-align: center;
   align-items: center;
@@ -116,7 +124,7 @@ html {
   display: block;
 }
 
-.navbar-font-size {
+.navbar-font {
   font-size: 1.3rem;
 }
 
@@ -389,7 +397,7 @@ a:hover {
 }
 
 .stay-bottom {
-  margin-top: 18rem;
+  position: relative;
 }
 
 .white-border {
@@ -416,4 +424,81 @@ li {
 
 footer {
   margin-top: 3.5rem;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* mobile view */
+
+.mobile .brand, .mobile .scroll-indicator {
+font-size: 3rem;
+}
+
+.mobile .navbar-font, .mobile #navButton {
+font-size: 2.5rem;
+}
+
+.mobile .nav .nav-link {
+padding: 0 2rem;
+}
+
+.mobile .nav-align {
+margin-top: 0.9rem;
+}
+
+.mobile .heading {
+font-size: 5rem;
+}
+
+.mobile .sub-head {
+font-size: 4rem;
+}
+
+.mobile .mini-head {
+  font-size: 2.5rem;
+}
+
+.mobile .card-title {
+font-size: 3rem!important;
+}
+
+.mobile #top {
+  padding-top: 20rem;
+  margin-top: -10rem;
+}
+
+.mobile #what-we-do .card-title {
+font-size: 2.5rem!important;
+}
+
+.mobile p {
+font-size: 2.5rem!important;
+}
+
+.mobile .fill-height {
+min-height: 50vh;
+}
+
+.mobile .fix-height {
+height: 10rem;
+}
+
+.mobile .accent-tab {
+height: 6rem;
+}
+
+.mobile .back-to-top {
+font-size: 5rem;
+width: 8rem;
+}
+
+.mobile .material {
+width: 100%;
+}
+
+.mobile footer .container-fluid.accent-color {
+  background-color: inherit;
 }

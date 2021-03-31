@@ -263,10 +263,6 @@ a.back-to-top:hover {
   margin-top: -0.9rem;
 }
 
-/* .nav-align {
-  margin-top: -0.9rem;
-} */
-
 @media (max-width: 992px) {
   ul.navbar-nav > li {
     width: 100%;
@@ -857,16 +853,16 @@ li {
   padding: 0 2rem;
 }
 
-.mobile .nav-align {
-  margin-top: 0.9rem;
-}
-
 .mobile .heading {
   font-size: 5rem;
 }
 
 .mobile .sub-head {
   font-size: 4rem;
+}
+
+.mobile .mini-head {
+  font-size: 2.5rem;
 }
 
 .mobile .card-title {

@@ -125,13 +125,13 @@ var getThreshold = function() {
   var navHeight = nav.outerHeight();
   // position of the heading in the document.
   var headingPos = head.offset().top;
-  // console.log("Heading Pos: " + headingPos);
+  console.log("Heading Pos: " + headingPos);
 
   // threshold at which colour needs to be changed
   // double navHeight: to make sure change happens
   // before user scrolls past the heading.
-  var threshold = headingPos - 2 * navHeight;
-  // console.log(threshold);
+  var threshold = headingPos; //- 2 * navHeight;
+  console.log(threshold);
 
   return threshold;
 };
@@ -181,13 +181,13 @@ var isMobile = function() {
   var toMobile = function() {
     $("body").addClass("mobile");
     resize();
-    resize2();
+    // console.log("to mobile");
   };
 
   var toDesktop = function() {
     $("body").removeClass("mobile");
     resize();
-    resize2();
+    // console.log("to desktop");
   }
 
   var checkMobile = function() {
