@@ -46,11 +46,11 @@
       //   uniformCardHeightImp(".member.card");
       // }, 200);
 
-      $(window).load(function() {
+      window.onload = function() {
         uniformCardHeight(".about-us.card");
         uniformCardHeight("#recent-updates .card");
         uniformCardHeight(".member.card");
-      })
+      };
     });
 
     var getThreshold = function() {
