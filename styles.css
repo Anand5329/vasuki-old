@@ -72,7 +72,6 @@ html {
   font-size: 2rem;
 }
 
-
 #top-carousel {
   margin-top: -3.5rem;
 }
@@ -94,7 +93,7 @@ html {
 
 .top-text > p {
   font-size: 1.2rem;
-  color: #FFFFF8
+  color: #fffff8;
 }
 
 .carousel-img {
@@ -106,16 +105,14 @@ html {
   .top-carousel-item {
     height: 60vh;
   }
-
 }
 
 .fill-height {
   height: 100vh;
 }
 
-
 #navbarNav {
-  flex-grow: 0!important;
+  flex-grow: 0 !important;
 }
 
 .gen {
@@ -138,7 +135,7 @@ html {
   /*transition: background-color 0.25s;*/
 }
 
-.navbar-dark .nav .active>.nav-link {
+.navbar-dark .nav .active > .nav-link {
   color: #fff;
 }
 
@@ -224,8 +221,12 @@ hr.nav-link {
   background-image: url("Pictures/technology.jpg");
 }
 
+.bg-img-traffic {
+  background-image: url("Pictures/traffic.jpg");
+}
+
 .solid-bg {
-  background-color: #6B3857;
+  background-color: #6b3857;
   color: white;
 }
 
@@ -242,7 +243,7 @@ a:hover {
      (#3A015C, #2E86AB, lavender)
      (#99130A, #2E86AB, #D5D2DB)
      (#F02719, #F1F514, #F9FB9D)*/
-  background-image: linear-gradient(to bottom right, #F02719, #F1F514);
+  background-image: linear-gradient(to bottom right, #f02719, #f1f514);
 }
 
 /* a:hover {
@@ -263,44 +264,44 @@ a:hover {
 
 .tab:hover {
   color: white;
-  background-color: #6B3857;
+  background-color: #6b3857;
   box-shadow: 0 4px 8px 0 purple;
 }
 
 #portfolio:hover a {
   color: white;
-  background-color: #19849F;
-  box-shadow: 0 4px 8px 0 #83D7EC;
+  background-color: #19849f;
+  box-shadow: 0 4px 8px 0 #83d7ec;
 }
 
 #updates:hover a {
   color: white;
-  background-color: #E9610C;
-  box-shadow: 0 4px 8px 0 #FAC19E;
+  background-color: #e9610c;
+  box-shadow: 0 4px 8px 0 #fac19e;
 }
 
 #resolutions:hover a {
   color: white;
-  background-color: #A61C3C;
-  box-shadow: 0 4px 8px 0 #ED96AB;
+  background-color: #a61c3c;
+  box-shadow: 0 4px 8px 0 #ed96ab;
 }
 
 #pipeline:hover a {
   color: white;
-  background-color: #CC285A;
-  box-shadow: 0 4px 8px 0 #C56DB0;
+  background-color: #cc285a;
+  box-shadow: 0 4px 8px 0 #c56db0;
 }
 
 #info:hover a {
   color: white;
-  background-color: #2F8C2C;
-  box-shadow: 0 4px 8px 0 #86D883;
+  background-color: #2f8c2c;
+  box-shadow: 0 4px 8px 0 #86d883;
 }
 
 #committee:hover a {
   color: white;
   background-color: #003249;
-  box-shadow: 0 4px 8px 0 #85E0FF;
+  box-shadow: 0 4px 8px 0 #85e0ff;
 }
 
 .about {
@@ -309,12 +310,12 @@ a:hover {
 }
 
 .display-none {
-  display: none!important;
+  display: none !important;
 }
 
 .about {
-   color: white;
-   background-color: orange;
+  color: white;
+  background-color: orange;
 }
 
 /* only changing the font size of about cards. */
@@ -327,7 +328,7 @@ a:hover {
   font-size: 1rem;
 }
 
-.about-list>li {
+.about-list > li {
   list-style-type: initial;
   display: list-item;
 }
@@ -351,36 +352,37 @@ a:hover {
 }
 
 .carousel-button {
-  color: #19849F;
+  color: #19849f;
 }
 
 .accent-color {
-  background-color: #0B3B47;
+  background-color: #0b3b47;
   color: white;
 }
 
 #intent {
   color: white;
-  background-color: #19849F;
+  background-color: #19849f;
 }
 
 #partners {
   color: white;
-  background-color: #E9610C;
+  background-color: #e9610c;
 }
 
 #focus {
   color: white;
-  background-color: #A61C3C;
+  background-color: #a61c3c;
 }
 
 #recent-updates {
   color: white;
-  background-color: #2F8C2C;
+  background-color: #2f8c2c;
 }
 
 @keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
 
@@ -402,7 +404,7 @@ a:hover {
 }
 
 .stay-bottom {
-  position: relative;
+  /* position: relative; */
 }
 
 .white-border {
@@ -410,22 +412,20 @@ a:hover {
 }
 
 .no-content {
-  color: white!important;
+  color: white !important;
 }
-
 
 /* centering text within a list item. */
 ul {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
 /* making bullets appear */
 li {
-  list-style-type:none;
-  display:inline-block;
-  }
-
+  list-style-type: none;
+  display: inline-block;
+}
 
 footer {
   margin-top: 3.5rem;
@@ -438,28 +438,40 @@ body {
 
 /* mobile view */
 
-.mobile .brand, .mobile .scroll-indicator {
-font-size: 3rem;
+.mobile .brand,
+.mobile .scroll-indicator {
+  font-size: 3rem;
 }
 
-.mobile .navbar-font, .mobile #navButton {
-font-size: 2.5rem;
+.mobile .desktop-options,
+.mobile-options {
+  display: none;
+}
+
+.mobile .mobile-options,
+.desktop-options {
+  display: block;
+}
+
+.mobile .navbar-font,
+.mobile #navButton {
+  font-size: 2.5rem;
 }
 
 .mobile .nav .nav-link {
-padding: 0 2rem;
+  padding: 0 2rem;
 }
 
 .mobile .nav-align {
-margin-top: 0.9rem;
+  margin-top: 0.9rem;
 }
 
 .mobile .heading {
-font-size: 5rem;
+  font-size: 5rem;
 }
 
 .mobile .sub-head {
-font-size: 4rem;
+  font-size: 4rem;
 }
 
 .mobile .mini-head {
@@ -467,11 +479,11 @@ font-size: 4rem;
 }
 
 .mobile .card-title {
-font-size: 3rem!important;
+  font-size: 3rem !important;
 }
 
 .mobile .card-subtitle {
-  font-size: 2rem!important;
+  font-size: 2rem !important;
 }
 
 .mobile #top {
@@ -480,32 +492,32 @@ font-size: 3rem!important;
 }
 
 .mobile #what-we-do .card-title {
-font-size: 2.5rem!important;
+  font-size: 2.5rem !important;
 }
 
 .mobile p {
-font-size: 2.5rem!important;
+  font-size: 2.5rem !important;
 }
 
 .mobile .fill-height {
-min-height: 50vh;
+  min-height: 50vh;
 }
 
 .mobile .fix-height {
-height: 10rem;
+  height: 10rem;
 }
 
 .mobile .accent-tab {
-height: 6rem;
+  height: 6rem;
 }
 
 .mobile .back-to-top {
-font-size: 5rem;
-width: 8rem;
+  font-size: 5rem;
+  width: 8rem;
 }
 
 .mobile .material {
-width: 100%;
+  width: 100%;
 }
 
 .mobile footer .container-fluid.accent-color {

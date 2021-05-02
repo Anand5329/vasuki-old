@@ -845,8 +845,16 @@ li {
   font-size: 3rem;
 }
 
-.mobile .navbar-font, .mobile #navButton {
+.mobile .navbar-font, .mobile #navButton, .mobile #user-dropdown {
   font-size: 2.5rem;
+}
+
+.mobile #desktop-options, #mobile-options {
+  display: none;
+}
+
+.mobile #mobile-options, #desktop-options {
+  display: block;
 }
 
 .mobile .nav .nav-link {
