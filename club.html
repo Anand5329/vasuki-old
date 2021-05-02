@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Info for Club Members</title>
+
+    <!-- fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/798fcfe915.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery UI-->
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="portfolio-styles.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="portfolio-template.js"></script>
+    <script type="text/javascript" src="functionality.js"></script>
+    <script type="text/javascript" src="carousel-templates.js"></script>
+
+    <style media="screen">
+      footer {
+        margin-top: 10rem;
+      }
+
+      body {
+        background-color: #04362c;
+      }
+
+      .usual-color {
+        color: black;
+        background-color: white;
+      }
+
+      #top {
+        height: 100vh;
+      }
+
+      .accent-color {
+        color: white;
+        background-color: #09886f;
+      }
+
+      .container-fluid .btn:hover {
+        color: white;
+      }
+
+      .dark-bg {
+        background-color: #04362c;
+        color: white;
+      }
+
+      #navbarNav .nav-item {
+        width: 100%;
+        padding: 0;
+      }
+
+      #tabs .dropdown-item:hover,
+      #tabs .dropdown-item:active,
+      #navbarNav .accent-color .nav-item .nav-link:hover,
+      #navbarNav .accent-color .nav-item .nav-link:active {
+        color: black;
+        background-color: white;
+      }
+
+      .tab {
+        border: none;
+      }
+
+      .bottom-border {
+        border-bottom: #04362c solid 0.5rem;
+      }
+
+      .collapse-club a {
+        color: black;
+      }
+
+      .collapse-club a:hover {
+        color: white;
+      }
+
+      .collapse-club .card {
+        border: #0cb190 solid 1px;
+        font-size: 1.3rem;
+      }
+
+      .collapse-club .card:hover {
+        color: white;
+        background-color: #0cb190;
+      }
+
+      .nav-pills .nav-link.active {
+        color: black;
+        background-color: white;
+        border: black solid 1px;
+      }
+
+      .nav-pills .nav-link.active .tab {
+        color: black;
+        background-color: white;
+        border: none;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        getThreshold();
+        fixFooter();
+      });
+
+      var getThreshold = function () {
+        // TODO: fix this: adding unwanted accent color.
+        return 10000;
+      };
+
+      var navButtonClick = function () {};
+
+      var createUpdateCard = function (title, link) {
+        var container = $("<div></div>");
+        container.addClass(["col-lg-6", "col-12", "pad"]);
+
+        var card = $("<div></div>");
+        card.addClass("card");
+
+        var anchor = $("<a></a>");
+        anchor.addClass("mini-head");
+        anchor.attr("href", link);
+        anchor.append(title);
+
+        card.append(anchor);
+        container.append(card);
+
+        return container;
+      };
+
+      var fixFooter = function () {
+        $("footer").css("margin-top", "10rem");
+      };
+    </script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <!-- TODO: fix nav elements not aligned at center line when navButton is pressed. -->
+    <nav
+      class="navbar navbar-dark navbar-expand-lg justify-content-between sticky-top zero-vertical-pad fix-height"
+    >
+      <a class="navbar-brand navbar-font mr-auto head" href="design3.1.html">
+        <strong>Vasuki</strong></a
+      >
+
+      <div class="navbar-font inherit-bg mobile-options">
+        <ul class="nav dark center fix-height">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <button
+        class="navbar-toggler mobile-options"
+        id="navButton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-font ml-auto" id="navbarNav">
+        <ul class="navbar-nav center accent-color">
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="#">Investment Committee</a>
+          </li>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="updates.html">Updates</a>
+          </li>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="pipeline.html">Pipeline</a>
+          </li>
+          <li class="nav-item active navbar-tab d-block d-lg-none">
+            <a class="nav-link" href="resolutions.html">Resolutions</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-font inherit-bg desktop-options">
+        <ul class="nav dark center">
+          <li class="nav-item active navbar-tab">
+            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item active dropdown navbar-tab">
+            <button
+              class="btn btn-nav btn-lg dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <div
+              class="dropdown-menu dropdown-menu-right accent-color"
+              id="tabs"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <a class="dropdown-item" href="portfolio.html">Portfolio</a>
+              <a class="dropdown-item" href="#">Investment Committee</a>
+              <a class="dropdown-item" href="updates.html">Updates</a>
+              <a class="dropdown-item" href="pipeline.html">Pipeline</a>
+              <a class="dropdown-item" href="resolutions.html">Resolutions</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- top -->
+    <div
+      class="container-fluid center head bg-img bg-img-optical-fiber bottom-border"
+      id="top"
+    >
+      <h1 class="heading"></h1>
+      <!-- <div class="container-fluid center scroll-indicator d-none d-lg-block">
+        <i class="fas fa-chevron-down blink"></i>
+      </div> -->
+    </div>
+
+    <!-- tabs -->
+    <div class="container-fluid center overlap">
+      <ul
+        class="nav nav-light nav-pills mb-3 light-bg row center"
+        role="tablist"
+      >
+        <li class="nav-item position-relative col-md-6 col-12 pad">
+          <a
+            class="nav-link card-block accent-color stretched-link text-decoration-none"
+            id="investment-docs-tab"
+            data-toggle="pill"
+            href="#investment-docs"
+            role="tab"
+            aria-controls="investment-docs"
+            aria-selected="false"
+          >
+            <div class="card tab accent-color">
+              <div class="card-body center">
+                <h5 class="card-title sub-head">
+                  Investment Related Documents
+                </h5>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- collapsing sections -->
+
+    <div class="tab-content container-fluid">
+      <div
+        class="container-fluid wrap pad tab-pane fade"
+        id="investment-docs"
+        role="tabpanel"
+        aria-labelledby="investment-docs-tab"
+      >
+        <div class="container-fluid wrap">
+          <a
+            class="btn accent-color center white-border"
+            data-toggle="collapse"
+            href="#current"
+            role="button"
+            aria-expanded="false"
+            aria-controls="current"
+          >
+            <h2 class="sub-head center">Current</h2>
+          </a>
+          <div class="row pad center collapse collapse-club" id="current"></div>
+        </div>
+
+        <div class="container-fluid wrap pad">
+          <a
+            class="btn accent-color center white-border"
+            data-toggle="collapse"
+            href="#past"
+            role="button"
+            aria-expanded="false"
+            aria-controls="past"
+          >
+            <h2 class="sub-head center">Past</h2>
+          </a>
+          <div class="row pad center collapse collapse-club" id="past"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="dark-bg stay-bottom" id="contact">
+      <div class="container-fluid">
+        <div class="row center wrap pad">
+          <h2 class="sub-head pad">Want to reach us?</h2>
+          <div class="col-sm-12 col-md-4 pad">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:vasukigp@vasuki.eu">vasukigp@vasuki.eu</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
