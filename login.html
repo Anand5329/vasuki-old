@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="stylesheet" href="../themes/default/css/style.css" /> -->
+    <link rel="stylesheet" href="styles/styles3.css" />
+
+    <!-- fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/798fcfe915.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery UI-->
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        color: white;
+        min-height: 100vh;
+        background-position: center;
+      }
+
+      #form-div {
+        background: rgba(0, 0, 0, 0.6);
+        /* background-color: inherit; */
+        /* background: rgba(69, 39, 217, 0.6); */
+      }
+
+      .form-control:focus {
+        border-color: cyan;
+      }
+
+      input {
+        /* background-color: black !important; */
+        /* color: white !important; */
+      }
+
+      form a,
+      form a:hover {
+        color: #07b5d4;
+      }
+
+      form button {
+        background-color: #07b5d4 !important;
+      }
+    </style>
+    <title>Login</title>
+  </head>
+  <body class="bg-img-tech center">
+    <div class="center pad" style="max-width: 900px">
+      <div class="row p-0">
+        <div class="col-lg-5 col-md-5" id="form-div">
+          <div class="form-signin align-items-center">
+            <h1 class="h2 mb-4 font-weight-normal mt-4">
+              Vasuki Investor Club
+            </h1>
+            <h2 class="h4 mb-4 font-weight-normal mt-4">Login</h2>
+
+            <form
+              id="site-user-login"
+              class="needs-validation text-left"
+              novalidate=""
+            >
+              <input
+                type="email"
+                id="inputEmail"
+                class="form-control"
+                placeholder="Email"
+                required=""
+                autofocus=""
+              />
+              <div class="invalid-feedback">Please provide a valid email.</div>
+              <div
+                id="login-error"
+                class="invalid-feedback"
+                style="display: none"
+              >
+                Please provide a valid email and password.
+              </div>
+              <input
+                type="password"
+                id="inputPassword"
+                class="form-control mt-3"
+                placeholder="Password"
+                required=""
+              />
+              <div class="invalid-feedback">Please provide a password.</div>
+              <div class="forgot-pswd mt-2 text-right">
+                <a href="<?php echo base_url('user/user/forgot_password') ?>"
+                  >Forgot Password</a
+                >
+              </div>
+              <button
+                class="btn-login btn btn-sm btn-primary btn-block mt-4"
+                type="submit"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7 d-none d-md-block no-padding">
+          <img src="Pictures/login.jpg" height="100%" width="100%" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
