@@ -124,14 +124,13 @@
         getThreshold();
         fixFooter();
         resize();
+        checkMobile();
       });
 
       var getThreshold = function () {
         // TODO: fix this: adding unwanted accent color.
         return 10000;
       };
-
-      var resize = function () {};
 
       var navButtonClick = function () {
         //console.log("resolution.navButtonClick");
@@ -273,13 +272,13 @@
       <div class="row pad center collapse collapse-resolution" id="special">
         <div class="col-lg-6 col-12 pad">
           <div class="card">
-            <a class="mini-head" href="#">Date</a>
+            <a class="mini-head" href="resolution_view.html">Date</a>
           </div>
         </div>
 
         <div class="col-lg-6 col-12 pad">
           <div class="card">
-            <a class="mini-head" href="#">Date</a>
+            <a class="mini-head" href="resolution_view.html">Date</a>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Investment Committee</title>
+    <title>Resolutions</title>
 
     <!-- fontawesome icons -->
     <script
@@ -57,7 +57,7 @@
       }
 
       body {
-        background-color: #240d22;
+        background-color: #91280d;
       }
 
       .usual-color {
@@ -71,7 +71,7 @@
 
       .accent-color {
         color: white;
-        background-color: #240d22;
+        background-color: #cf3913;
       }
 
       .container-fluid .btn:hover {
@@ -79,8 +79,8 @@
       }
 
       .dark-bg {
+        background-color: #91280d;
         color: white;
-        background-color: #240d22;
       }
 
       #navbarNav .nav-item {
@@ -96,20 +96,31 @@
         background-color: white;
       }
 
-      #meetings {
-        flex-direction: column;
+      .bottom-border {
+        border-bottom: #91280d solid 0.5rem;
       }
 
-      #meetings .row {
-        background-color: #041825;
+      .collapse-resolution a {
+        color: black;
+      }
+
+      .collapse-resolution a:hover {
         color: white;
-        min-width: 70vw;
-        margin: 1rem 0;
+      }
+
+      .collapse-resolution .card {
+        border: #f0785a solid 1px;
+        font-size: 1.3rem;
+      }
+
+      .collapse-resolution .card:hover {
+        color: white;
+        background-color: #f0785a;
       }
 
       table {
         color: white;
-        background-color: #041825;
+        background-color: #91280d;
         min-width: 70vw;
         border: 1px white solid;
       }
@@ -135,7 +146,7 @@
       };
 
       var navButtonClick = function () {
-        //console.log("investment.navButtonClick");
+        //console.log("resolution.navButtonClick");
       };
 
       var createUpdateCard = function (title, link) {
@@ -198,7 +209,7 @@
             <a class="nav-link" href="portfolio.html">Portfolio</a>
           </li>
           <li class="nav-item active navbar-tab d-block d-lg-none">
-            <a class="nav-link" href="resolutions.html">Resolutions</a>
+            <a class="nav-link" href="investment.html">Investment Committee</a>
           </li>
           <li class="nav-item active navbar-tab d-block d-lg-none">
             <a class="nav-link" href="updates.html">Updates</a>
@@ -233,7 +244,9 @@
               aria-labelledby="dropdownMenuButton"
             >
               <a class="dropdown-item" href="portfolio.html">Portfolio</a>
-              <a class="dropdown-item" href="resolutions.html">Resolutions</a>
+              <a class="dropdown-item" href="investment.html"
+                >Investment Committee</a
+              >
               <a class="dropdown-item" href="updates.html">Updates</a>
               <a class="dropdown-item" href="pipeline.html">Pipeline</a>
               <a class="dropdown-item" href="club.html"
@@ -247,7 +260,7 @@
 
     <!-- top -->
     <div
-      class="container-fluid center head bg-img bg-img-network bottom-border"
+      class="container-fluid center head bg-img bg-img-traffic bottom-border"
       id="top"
     >
       <h1 class="heading"></h1>
@@ -256,25 +269,21 @@
       </div> -->
     </div>
 
-    <div class="container-fluid center overlap" id="meetings">
-      <h1 class="heading pad">Meeting #n</h1>
+    <!-- collapsing sections -->
+
+    <div class="container-fluid center wrap pad overlap">
+      <h1 class="heading pad">Resolutions</h1>
       <table>
         <tr>
           <th>Date</th>
           <td>11.11.11</td>
         </tr>
         <tr>
-          <th>Agenda</th>
+          <th>Resolution type</th>
           <td>...</td>
         </tr>
         <tr>
-          <th>Background of meeting</th>
-          <td>
-            <a href=""><i class="icon far fa-file-pdf"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <th>Minutes of the meeting</th>
+          <th>Resolution</th>
           <td>
             <a href=""><i class="icon far fa-file-pdf"></i></a>
           </td>

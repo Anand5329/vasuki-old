@@ -68,6 +68,10 @@ html {
   height: 5%;
 }
 
+.icon {
+  font-size: 2rem;
+}
+
 .brand {
   font-size: 2rem;
 }
