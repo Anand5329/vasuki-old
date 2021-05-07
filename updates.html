@@ -60,6 +60,25 @@
         height: 100vh;
       }
 
+      .tab .card-body {
+        padding: 0;
+      }
+
+      .tab .card-title {
+        margin-bottom: 0;
+      }
+
+      .nav-pills .nav-link.active.card-block {
+        background-color: inherit;
+        color: inherit;
+        border: none;
+      }
+
+      .nav-pills .nav-link.active.card-block .no-js-accent-color {
+        color: black;
+        background-color: white;
+      }
+
       .no-js-accent-color {
         color: white;
         background-color: #0b3b47;
@@ -266,15 +285,85 @@
         <h2 class="sub-head center">Weekly Updates</h2>
       </a>
       <div class="row pad center collapse collapse-update" id="week">
-        <div class="col-lg-6 col-12 pad">
-          <div class="card">
-            <a class="mini-head" href="#">Week n; Year m</a>
-          </div>
-        </div>
+        <ul class="nav nav-pills mb-3 row" role="tablist">
+          <li class="nav-item position-relative col-md-6 col-12 pad">
+            <a
+              class="nav-link card-block stretched-link text-decoration-none"
+              id="year2"
+              data-toggle="pill"
+              href="#year2-list"
+              role="tab"
+              aria-controls="year2-list"
+              aria-selected="false"
+            >
+              <div class="card tab no-js-accent-color">
+                <div class="card-body center">
+                  <h5 class="card-title mini-head">Year 2</h5>
+                </div>
+              </div>
+            </a>
+          </li>
 
-        <div class="col-lg-6 col-12 pad">
-          <div class="card">
-            <a class="mini-head" href="#">Week a; Year b</a>
+          <li class="nav-item position-relative col-md-6 col-12 pad">
+            <a
+              class="nav-link card-block stretched-link text-decoration-none"
+              id="year1"
+              data-toggle="pill"
+              href="#year1-list"
+              role="tab"
+              aria-controls="year1-list"
+              aria-selected="false"
+            >
+              <div class="card tab no-js-accent-color">
+                <div class="card-body center">
+                  <h5 class="card-title mini-head">Year 1</h5>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="container-fluid tab-content">
+          <div
+            class="tab-pane fade pad accent-color"
+            id="year2-list"
+            role="tabpanel"
+            aria-labelledby="year2"
+          >
+            <div class="row">
+              <div class="col-lg-6 col-12 pad">
+                <div class="card">
+                  <a class="mini-head" href="#">Week n; Year 2</a>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-12 pad">
+                <div class="card">
+                  <a class="mini-head" href="#">Week a; Year 2</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row flex tab-pane fade pad accent-color"
+            id="year1-list"
+            role="tabpanel"
+            aria-labelledby="year1"
+          >
+            <div class="row">
+              <div class="col-lg-6 col-12 pad">
+                <div class="card">
+                  <a class="mini-head" href="#">Week n; Year 1</a>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-12 pad">
+                <div class="card">
+                  <a class="mini-head" href="#">Week a; Year 1</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

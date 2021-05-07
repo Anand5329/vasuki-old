@@ -50,6 +50,26 @@
     <script type="text/javascript" src="portfolio-template.js"></script>
     <script type="text/javascript" src="functionality.js"></script>
     <script type="text/javascript" src="carousel-templates.js"></script>
+
+    <style>
+      .usual-colour,
+      .usual-colour a,
+      .usual-colour a {
+        color: black;
+        background-color: white;
+      }
+
+      table {
+        min-width: 70vw;
+        border: 1px black solid;
+      }
+
+      th,
+      td {
+        padding: 1rem;
+        border: 1px black solid;
+      }
+    </style>
   </head>
 
   <!-- TODO: transition effects for bg gradients -->
@@ -166,10 +186,17 @@
         >
           <h2 class="sub-head center">Current</h2>
         </a>
-        <div
-          class="row pad center collapse collapse-company"
-          id="current"
-        ></div>
+        <div class="row pad center collapse collapse-company" id="current">
+          <table class="" id="current-table">
+            <tr class="accent-color">
+              <th>Logo</th>
+              <th>Company</th>
+              <th>Country</th>
+              <th>Description</th>
+              <th>Read more</th>
+            </tr>
+          </table>
+        </div>
       </div>
 
       <div class="container-fluid wrap portfolio pad">

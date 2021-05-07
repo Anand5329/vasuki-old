@@ -1,10 +1,11 @@
 let addionics = {
   name: "Addionics",
   country: "United Kingdom",
-  description: "Developed a unique electro-printing method to create 3D current collectors for Li-ion batteries enabling energy and power customisation.",
+  description:
+    "Developed a unique electro-printing method to create 3D current collectors for Li-ion batteries enabling energy and power customisation.",
   status: "current",
   pdf: "#",
-  colour: "blue-grad"
+  colour: "blue-grad",
 };
 
 // TODO: Add choosing functionality for colours when creating company card.
@@ -16,8 +17,9 @@ let companyA = {
   status: "current",
   pipeline: "evaluation",
   pdf: "example.pdf",
-  colour: "green-grad"
-}
+  colour: "green-grad",
+  logo: "Pictures/logo.jpg",
+};
 
 let companyB = {
   name: "Company B",
@@ -26,8 +28,9 @@ let companyB = {
   status: "current",
   pipeline: "pre-evaluation",
   pdf: "example.pdf",
-  colour: "blue-grad"
-}
+  colour: "blue-grad",
+  logo: "Pictures/logo.jpg",
+};
 
 let companyC = {
   name: "Company C",
@@ -36,14 +39,15 @@ let companyC = {
   status: "current",
   pipeline: "early",
   pdf: "example.pdf",
-  colour: "red-grad"
-}
+  colour: "red-grad",
+  logo: "Pictures/logo.jpg",
+};
 
 var companyList = [companyA, companyB, companyC];
 
 var doc = $(document);
 
-doc.ready(function() {
+doc.ready(function () {
   createCompanyList("current");
   createCompanyList("past");
   createCompanyList("all");
@@ -51,22 +55,24 @@ doc.ready(function() {
   // viewAll();
 });
 
-var createCompanyList = function(category) {
+var createCompanyList = function (category) {
   var currentContainer = $("#" + category);
+  var table = $("#" + category + "-table");
   var emptyFlag = true;
   companyList.forEach((item, i) => {
     if (item.status == category || category == "all") {
       emptyFlag = false;
-      currentContainer.append(getCompanyTemplate(item));
+      //currentContainer.append(getCompanyTemplate(item));
+      table.append(getCompanyTemplateVertical(item));
     }
   });
   if (emptyFlag) {
     currentContainer.append(getNoContentMessage);
-    console.log("No content.")
+    console.log("No content.");
   }
 };
 
-var getNoContentMessage = function() {
+var getNoContentMessage = function () {
   var italics = $("<em></em>");
   italics.append("No content to show.");
   var h5 = $("<h5></h5>");
@@ -75,7 +81,37 @@ var getNoContentMessage = function() {
   return h5;
 };
 
-var getCompanyTemplate = function(company) {
+var getCompanyTemplateVertical = function (company) {
+  var row = $("<tr></tr>");
+  row.addClass("usual-colour");
+  var logo = $("<img/>");
+  logo.attr("src", company.logo);
+  logo.css("height", "4rem");
+  logo = $("<td></td>").append(logo);
+  logo.css("padding", "0 1rem");
+  var name = $("<th></th>");
+  name.append(company.name);
+
+  var country = $("<td></td>").append(company.country);
+  var file = $("<td></td>");
+  var pdf = $("<a target='blank'></a>").append(
+    '<i class="far fa-file-pdf"></i>'
+  );
+  pdf.attr("href", company.pdf);
+  file.append(pdf);
+
+  var desc = $("<td></td>").append(company.description);
+
+  row.append(logo);
+  row.append(name);
+  row.append(country);
+  row.append(desc);
+  row.append(file);
+
+  return row;
+};
+
+var getCompanyTemplate = function (company) {
   // container col to get sizes right
   var col = $("<div></div>");
   col.addClass(["col-12", "col-lg-4", "pad"]);
@@ -112,15 +148,15 @@ var getCompanyTemplate = function(company) {
   card.append(cardBody);
   col.append(card);
   return col;
-}
+};
 
-var viewAll = function() {
-  $("#view-all-btn").click(function() {
+var viewAll = function () {
+  $("#view-all-btn").click(function () {
     var collapsibleElements = $(".collapse-company");
-    collapsibleElements.each(function() {
+    collapsibleElements.each(function () {
       $(this).show();
-      this.style.removeProperty('display');
+      this.style.removeProperty("display");
       // console.log(this);
-    })
+    });
   });
 };
