@@ -133,14 +133,25 @@
         background-color: white;
         border: none;
       }
+
+      table {
+        color: white;
+        background-color: #04362c;
+        min-width: 70vw;
+        border: 1px white solid;
+      }
+
+      th,
+      td {
+        padding: 1rem;
+        border: 1px white solid;
+      }
     </style>
 
     <script type="text/javascript">
       $(document).ready(function () {
         getThreshold();
         fixFooter();
-        createCompanyList("current", "club");
-        createCompanyList("past", "club");
       });
 
       var getThreshold = function () {
@@ -270,69 +281,36 @@
 
     <!-- tabs -->
     <div class="container-fluid center overlap">
-      <ul
-        class="nav nav-light nav-pills mb-3 light-bg row center"
-        role="tablist"
-      >
-        <li class="nav-item position-relative col-md-6 col-12 pad">
-          <a
-            class="nav-link card-block accent-color stretched-link text-decoration-none"
-            id="investment-docs-tab"
-            data-toggle="pill"
-            href="#investment-docs"
-            role="tab"
-            aria-controls="investment-docs"
-            aria-selected="false"
-          >
-            <div class="card tab accent-color">
-              <div class="card-body center">
-                <h5 class="card-title sub-head">
-                  Investment Related Documents
-                </h5>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- collapsing sections -->
-
-    <div class="tab-content container-fluid">
-      <div
-        class="container-fluid wrap pad tab-pane fade"
-        id="investment-docs"
-        role="tabpanel"
-        aria-labelledby="investment-docs-tab"
-      >
-        <div class="container-fluid wrap">
-          <a
-            class="btn accent-color center white-border"
-            data-toggle="collapse"
-            href="#current"
-            role="button"
-            aria-expanded="false"
-            aria-controls="current"
-          >
-            <h2 class="sub-head center">Current</h2>
-          </a>
-          <div class="row pad center collapse collapse-club" id="current"></div>
-        </div>
-
-        <div class="container-fluid wrap pad">
-          <a
-            class="btn accent-color center white-border"
-            data-toggle="collapse"
-            href="#past"
-            role="button"
-            aria-expanded="false"
-            aria-controls="past"
-          >
-            <h2 class="sub-head center">Past</h2>
-          </a>
-          <div class="row pad center collapse collapse-club" id="past"></div>
-        </div>
-      </div>
+      <table>
+        <tr>
+          <th>File Name</th>
+          <th>View</th>
+        </tr>
+        <tr>
+          <td>File #1</td>
+          <td>
+            <a href=""><i class="icon far fa-file-pdf"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>File #2</td>
+          <td>
+            <a href=""><i class="icon far fa-file-pdf"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>File #3</td>
+          <td>
+            <a href=""><i class="icon far fa-file-pdf"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>File #4</td>
+          <td>
+            <a href=""><i class="icon far fa-file-pdf"></i></a>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <!-- footer -->

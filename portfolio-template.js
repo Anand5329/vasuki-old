@@ -55,15 +55,19 @@ doc.ready(function () {
   // viewAll();
 });
 
-var createCompanyList = function (category) {
+var createCompanyList = function (category, page = null) {
   var currentContainer = $("#" + category);
   var table = $("#" + category + "-table");
   var emptyFlag = true;
   companyList.forEach((item, i) => {
     if (item.status == category || category == "all") {
       emptyFlag = false;
-      //currentContainer.append(getCompanyTemplate(item));
-      table.append(getCompanyTemplateVertical(item));
+      if (page == null) {
+        //currentContainer.append(getCompanyTemplate(item));
+        table.append(getCompanyTemplateVertical(item));
+      } else {
+        currentContainer.append(getCompanyTemplate(item, page));
+      }
     }
   });
   if (emptyFlag) {
@@ -111,7 +115,7 @@ var getCompanyTemplateVertical = function (company) {
   return row;
 };
 
-var getCompanyTemplate = function (company) {
+var getCompanyTemplate = function (company, page = null) {
   // container col to get sizes right
   var col = $("<div></div>");
   col.addClass(["col-12", "col-lg-4", "pad"]);
@@ -126,8 +130,12 @@ var getCompanyTemplate = function (company) {
   var cardTitle = $("<h5></h5>");
   cardTitle.addClass("card-title");
   var cardLink = $("<a></a>");
-  cardLink.attr("href", company.pdf);
-  cardLink.attr("target", "_blank");
+  if (page == null || page == "portfolio") {
+    cardLink.attr("href", company.pdf);
+    cardLink.attr("target", "_blank");
+  } else {
+    cardLink.attr("href", "club_files.html");
+  }
   cardLink.append(company.name);
   cardTitle.append(cardLink);
   //card-subtitle
