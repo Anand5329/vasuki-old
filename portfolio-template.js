@@ -63,8 +63,8 @@ var createCompanyList = function (category, page = null) {
     if (item.status == category || category == "all") {
       emptyFlag = false;
       if (page == null) {
-        //currentContainer.append(getCompanyTemplate(item));
-        table.append(getCompanyTemplateVertical(item));
+        currentContainer.append(getCompanyTemplate(item));
+        //table.append(getCompanyTemplateVertical(item));
       } else {
         currentContainer.append(getCompanyTemplate(item, page));
       }
@@ -147,10 +147,16 @@ var getCompanyTemplate = function (company, page = null) {
   cardText.addClass("card-text");
   cardText.append(company.description);
 
+  // logo:
+  var logo = $("<img/>");
+  logo.attr("src", company.logo);
+  logo.css("height", "4rem");
+
   // adding title, subtitle and desc. to card-body
+  cardBody.append(logo);
   cardBody.append(cardTitle);
   cardBody.append(cardSubtitle);
-  cardBody.append(cardText);
+  //cardBody.append(cardText);
 
   // adding body to card
   card.append(cardBody);
