@@ -17,8 +17,9 @@ let companyA = {
   status: "current",
   pipeline: "evaluation",
   pdf: "example.pdf",
-  colour: "green-grad",
-  logo: "Pictures/logo.jpg",
+  logo: "Pictures/logo.png",
+  colour1: "#000",
+  colour2: "#000",
 };
 
 let companyB = {
@@ -28,8 +29,9 @@ let companyB = {
   status: "current",
   pipeline: "pre-evaluation",
   pdf: "example.pdf",
-  colour: "blue-grad",
-  logo: "Pictures/logo.jpg",
+  logo: "Pictures/logo.png",
+  colour1: "#000",
+  colour2: "#000",
 };
 
 let companyC = {
@@ -39,8 +41,9 @@ let companyC = {
   status: "current",
   pipeline: "early",
   pdf: "example.pdf",
-  colour: "red-grad",
-  logo: "Pictures/logo.jpg",
+  logo: "Pictures/logo.png",
+  colour1: "#000",
+  colour2: "#000",
 };
 
 var companyList = [companyA, companyB, companyC];
@@ -48,31 +51,38 @@ var companyList = [companyA, companyB, companyC];
 var doc = $(document);
 
 doc.ready(function () {
+  //console.log("Running");
   createCompanyList("current");
   createCompanyList("past");
   createCompanyList("all");
-  uniformCardHeight("company");
-  // viewAll();
+  uniformCompanyHeight();
+  //console.log(companyList);
+  // setTimeout(function () {
+  //   uniformCardHeight(".company");
+  // }, 4000);
+  // window.onload = function () {
+  //   console.log("uniforming");
+
+  //   uniformCardHeight(".company");
+  // };
 });
 
-var createCompanyList = function (category, page = null) {
-  var currentContainer = $("#" + category);
-  var table = $("#" + category + "-table");
+var createCompanyList = function (category, page = null, link = null) {
+  var id = "#" + category;
+  if (page != null) {
+    id = id + "-" + page;
+  }
+  var currentContainer = $(id);
   var emptyFlag = true;
   companyList.forEach((item, i) => {
     if (item.status == category || category == "all") {
       emptyFlag = false;
-      if (page == null) {
-        currentContainer.append(getCompanyTemplate(item));
-        //table.append(getCompanyTemplateVertical(item));
-      } else {
-        currentContainer.append(getCompanyTemplate(item, page));
-      }
+      currentContainer.append(getCompanyTemplate(item, page, link));
     }
   });
   if (emptyFlag) {
     currentContainer.append(getNoContentMessage);
-    console.log("No content.");
+    //console.log("No content.");
   }
 };
 
@@ -85,43 +95,18 @@ var getNoContentMessage = function () {
   return h5;
 };
 
-var getCompanyTemplateVertical = function (company) {
-  var row = $("<tr></tr>");
-  row.addClass("usual-colour");
-  var logo = $("<img/>");
-  logo.attr("src", company.logo);
-  logo.css("height", "4rem");
-  logo = $("<td></td>").append(logo);
-  logo.css("padding", "0 1rem");
-  var name = $("<th></th>");
-  name.append(company.name);
-
-  var country = $("<td></td>").append(company.country);
-  var file = $("<td></td>");
-  var pdf = $("<a target='blank'></a>").append(
-    '<i class="far fa-file-pdf"></i>'
-  );
-  pdf.attr("href", company.pdf);
-  file.append(pdf);
-
-  var desc = $("<td></td>").append(company.description);
-
-  row.append(logo);
-  row.append(name);
-  row.append(country);
-  row.append(desc);
-  row.append(file);
-
-  return row;
-};
-
-var getCompanyTemplate = function (company, page = null) {
+var getCompanyTemplate = function (company, page = null, link = null) {
   // container col to get sizes right
   var col = $("<div></div>");
   col.addClass(["col-12", "col-lg-4", "pad"]);
   // creating the card
   var card = $("<div></div>");
-  card.addClass(["card", "company", company.colour, "usual-color"]);
+  card.addClass(["card", "company"]);
+  //card.addClass("usual-colour"); don't seem to need this
+  card.css(
+    "background-image",
+    "linear-gradient(180deg, " + company.colour1 + ", " + company.colour2
+  );
   // card-body
   var cardBody = $("<div></div>");
   cardBody.addClass("card-body");
@@ -134,7 +119,7 @@ var getCompanyTemplate = function (company, page = null) {
     cardLink.attr("href", company.pdf);
     cardLink.attr("target", "_blank");
   } else {
-    cardLink.attr("href", "club_files.html");
+    cardLink.attr("href", link + company.portfolio);
   }
   cardLink.append(company.name);
   cardTitle.append(cardLink);
@@ -148,14 +133,22 @@ var getCompanyTemplate = function (company, page = null) {
   cardText.append(company.description);
 
   // logo:
-  var logo = $("<img/>");
-  logo.attr("src", company.logo);
-  logo.css("height", "4rem");
+  console.log(page);
+  if (company.logo != "" && company.logo != null && page == null) {
+    var logo = $("<img/>");
+    logo.attr("src", company.logo);
+    logo.css("max-height", "3.5rem");
+    logo.css("max-width", "15rem");
+    var website = $("<a href='" + company.website + "'></a>");
+    //adding logo:
+    website.append(logo);
+    cardBody.append(website);
+  }
 
-  // adding title, subtitle and desc. to card-body
-  cardBody.append(logo);
+  // adding title, subtitle to card-body
   cardBody.append(cardTitle);
   cardBody.append(cardSubtitle);
+  //desc not needed.
   //cardBody.append(cardText);
 
   // adding body to card
@@ -164,13 +157,65 @@ var getCompanyTemplate = function (company, page = null) {
   return col;
 };
 
-var viewAll = function () {
-  $("#view-all-btn").click(function () {
-    var collapsibleElements = $(".collapse-company");
-    collapsibleElements.each(function () {
-      $(this).show();
-      this.style.removeProperty("display");
-      // console.log(this);
+var uniformCompanyHeight = function () {
+  var collapsibleElements = $(".collapse-company");
+  var size = collapsibleElements.length;
+  collapsibleElements.each(function () {
+    //console.log("showing");
+    $(this).collapse("show");
+    //$(this).css("display", "flex");
+
+    //console.log(this);
+  });
+
+  var onlyOnce = new Array(size);
+  onlyOnce.fill(true);
+  var i = 0;
+  //console.log(onlyOnce);
+  //console.log("uniforming");
+  var cards = $(".company");
+
+  setTimeout(function () {
+    uniformCardHeight(".company");
+  }, 0);
+
+  collapsibleElements.each(function () {
+    $(this).on("shown.bs.collapse", function () {
+      //console.log("hiding");
+      //console.log(onlyOnce);
+      if (onlyOnce[i]) {
+        $(this).collapse("hide");
+        onlyOnce[i] = false;
+        i++;
+      }
     });
   });
+
+  // setTimeout(function () {
+  //   collapsibleElements.each(function () {
+  //     console.log("showed");
+  //     uniformCardHeight(".company");
+  //     $(this).collapse("hide");
+  //   });
+  // }, 100);
+
+  // uniformCardHeight(".company");
+};
+
+var createSlimCard = function (title, link) {
+  var container = $("<div></div>");
+  container.addClass(["col-lg-6", "col-12", "pad"]);
+
+  var card = $("<div></div>");
+  card.addClass("card");
+
+  var anchor = $("<a></a>");
+  anchor.addClass("mini-head");
+  anchor.attr("href", link);
+  anchor.append(title);
+
+  card.append(anchor);
+  container.append(card);
+
+  return container;
 };

@@ -21,39 +21,40 @@ body {
   /* width: 16rem; */
   transition: background-image 1s;
   /* margin: 1rem; */
+  color: white;
 }
 
 .company:hover {
-  color: white;
-  background-image: linear-gradient(to bottom, #3A015C, #2E86AB);
+  color: black;
+  background-color: white;
+  background-image: none !important;
 }
 
 /* Different colours for companies: */
 
-.red-grad:hover {
-  background-image: linear-gradient(to bottom, #6E0C1D, #B81430);
+.red-grad {
+  background-image: linear-gradient(to bottom, #6e0c1d, #b81430);
 }
 
-.blue-grad:hover {
-  background-image: linear-gradient(to bottom, #3A015C, #2E86AB);
+.blue-grad {
+  background-image: linear-gradient(to bottom, #2e86ab, #3a015c);
 }
 
-.green-grad:hover {
-  background-image: linear-gradient(to bottom, #004F2D, #00B868);
+.green-grad {
+  background-image: linear-gradient(to bottom, #004f2d, #00b868);
 }
-
 
 .company a {
-  color: black;
+  color: white;
 }
 
-.company:hover a{
-  color: white;
+.company:hover a {
+  color: black;
   text-decoration: underline;
 }
 
 .bg-img-world {
-  background-image: url("Pictures/world-muted.jpg");
+  background-image: url("../mockup/Pictures/world-muted.jpg");
 }
 
 #heading {
@@ -75,7 +76,8 @@ body {
   justify-content: flex-end;
 }
 
-#tabs .dropdown-item:hover, #tabs .dropdown-item:active {
+#tabs .dropdown-item:hover,
+#tabs .dropdown-item:active {
   background-color: white;
   color: black;
 }
