@@ -237,6 +237,10 @@ hr.nav-link {
   background-image: url("Pictures/traffic.jpg");
 }
 
+.bg-img-world {
+  background-image: url("Pictures/world-muted.jpg");
+}
+
 .solid-bg {
   background-color: #6b3857;
   color: white;
