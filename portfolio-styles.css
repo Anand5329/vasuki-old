@@ -53,10 +53,6 @@ body {
   text-decoration: underline;
 }
 
-.bg-img-world {
-  background-image: url("../mockup/Pictures/world-muted.jpg");
-}
-
 #heading {
   color: white;
   /* background-color: black; */
