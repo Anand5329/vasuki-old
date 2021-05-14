@@ -53,6 +53,14 @@ html {
   padding: 1rem;
 }
 
+.mini-head {
+  font-size: 1.5rem;
+}
+
+table {
+  font-size: 2rem;
+}
+
 .heading {
   color: white;
   display: block;
@@ -445,6 +453,14 @@ body {
 .mobile .brand,
 .mobile .scroll-indicator {
   font-size: 3rem;
+}
+
+.mobile .mini-head {
+  font-size: 2.5rem;
+}
+
+.mobile table {
+  font-size: 2rem;
 }
 
 .mobile .desktop-options,
