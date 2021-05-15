@@ -57,6 +57,7 @@
         //TODO: fix uniformCardHeight
         uniformTabHeight();
         squareTabs();
+        checkXl();
         resize();
         resize2();
         squareElement(".back-to-top");
@@ -87,6 +88,7 @@
           uniformCardHeight("#recent-updates .card");
           squareElement(".back-to-top");
           //squareElement(".back-to-top");
+          checkXl();
         });
       };
 
@@ -108,7 +110,7 @@
       };
     </script>
 
-    <title></title>
+    <title>Home</title>
   </head>
 
   <body class="">
@@ -119,9 +121,21 @@
 
     <!-- navbar -->
     <nav
-      class="navbar navbar-light white-bg navbar-expand-lg bottom-border justify-content-between sticky-top zero-vertical-pad fix-height"
+      class="
+        navbar navbar-light
+        white-bg
+        navbar-expand-xl
+        bottom-border
+        justify-content-between
+        sticky-top
+        zero-vertical-pad
+        fix-height
+      "
     >
-      <a class="navbar-brand navbar-font mr-auto head" href="#top">
+      <a
+        class="navbar-brand navbar-font mr-auto head sub-fix-height"
+        href="#top"
+      >
         <h1 class="brand"><strong>Vasuki</strong></h1>
       </a>
 
@@ -156,21 +170,15 @@
         </ul>
       </div>
 
-      <button
-        class="navbar-toggler"
-        id="navButton"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-
       <div
-        class="collapse navbar-collapse white-bg navbar-font ml-auto bottom-border"
+        class="
+          collapse
+          navbar-collapse
+          white-bg
+          navbar-font
+          ml-auto
+          bottom-border
+        "
         id="navbarNav"
       >
         <ul class="navbar-nav center">
@@ -193,6 +201,7 @@
           </li>
         </ul>
       </div>
+
       <div class="navbar-font inherit-bg" id="desktop-options">
         <ul class="nav dark center">
           <li class="nav-item active dropdown navbar-tab">
@@ -223,6 +232,19 @@
           </li>
         </ul>
       </div>
+
+      <button
+        class="navbar-toggler"
+        id="navButton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <div
@@ -291,7 +313,14 @@
 
     <!-- What we do Tabs -->
     <div
-      class="container-fluid center wrap section bg-img bg-img-circuit-green fill-height"
+      class="
+        container-fluid
+        center
+        wrap
+        section
+        bg-img bg-img-circuit-green
+        fill-height
+      "
       id="what-we-do"
     >
       <h2 class="sub-head white pad">What we do</h2>
@@ -299,7 +328,13 @@
         <div class="col-md-4 col-12 pad center">
           <div class="card tab circle" id="portfolio">
             <a
-              class="card-block circle stretched-link text-decoration-none center"
+              class="
+                card-block
+                circle
+                stretched-link
+                text-decoration-none
+                center
+              "
               href="portfolio.html"
             >
               <div class="card-body center wrap">
@@ -313,7 +348,13 @@
         <div class="col-md-4 col-12 pad center">
           <div class="card tab circle" id="updates">
             <a
-              class="card-block circle stretched-link text-decoration-none center"
+              class="
+                card-block
+                circle
+                stretched-link
+                text-decoration-none
+                center
+              "
               href="updates.html"
             >
               <div class="card-body">
@@ -327,7 +368,13 @@
         <div class="col-md-4 col-12 pad center">
           <div class="card tab circle" id="pipeline">
             <a
-              class="card-block circle stretched-link text-decoration-none center"
+              class="
+                card-block
+                circle
+                stretched-link
+                text-decoration-none
+                center
+              "
               href="pipeline.html"
             >
               <div class="card-body">
@@ -343,7 +390,13 @@
         <div class="col-md-4 col-12 pad center">
           <div class="card tab circle" id="committee">
             <a
-              class="card-block circle stretched-link text-decoration-none center"
+              class="
+                card-block
+                circle
+                stretched-link
+                text-decoration-none
+                center
+              "
               href="investment.html"
             >
               <div class="card-body">
@@ -357,7 +410,13 @@
         <div class="col-md-4 col-12 pad center">
           <div class="card tab circle" id="info">
             <a
-              class="card-block circle stretched-link text-decoration-none center"
+              class="
+                card-block
+                circle
+                stretched-link
+                text-decoration-none
+                center
+              "
               href="club.html"
             >
               <div class="card-body">
@@ -371,7 +430,13 @@
         <div class="col-md-4 col-12 pad center">
           <div class="card tab circle" id="resolutions">
             <a
-              class="card-block circle stretched-link text-decoration-none center"
+              class="
+                card-block
+                circle
+                stretched-link
+                text-decoration-none
+                center
+              "
               href="resolutions.html"
             >
               <div class="card-body">
@@ -387,7 +452,14 @@
     <!-- TODO: Make it so it is possible to populate this section dynamically -->
     <!-- Recent updates -->
     <div
-      class="container-fluid center wrap bg-img bg-img-system section fill-height"
+      class="
+        container-fluid
+        center
+        wrap
+        bg-img bg-img-system
+        section
+        fill-height
+      "
       id="recent-updates"
     >
       <h3 class="sub-head white">Recent Updates</h3>
@@ -443,7 +515,14 @@
       >
         <li class="nav-item position-relative col-12 col-lg-4">
           <a
-            class="nav-link active card-block stretched-link text-decoration-none center"
+            class="
+              nav-link
+              active
+              card-block
+              stretched-link
+              text-decoration-none
+              center
+            "
             id="card-member1"
             data-toggle="pill"
             href="#member1"
@@ -474,7 +553,13 @@
 
         <li class="nav-item position-relative col-12 col-lg-4">
           <a
-            class="nav-link card-block stretched-link text-decoration-none center"
+            class="
+              nav-link
+              card-block
+              stretched-link
+              text-decoration-none
+              center
+            "
             id="card-member2"
             data-toggle="pill"
             href="#member2"
@@ -505,7 +590,13 @@
 
         <li class="nav-item position-relative col-lg-4 col-12">
           <a
-            class="nav-link card-block stretched-link text-decoration-none center"
+            class="
+              nav-link
+              card-block
+              stretched-link
+              text-decoration-none
+              center
+            "
             id="card-member3"
             data-toggle="pill"
             href="#member3"

@@ -190,6 +190,31 @@ var checkMobile = function () {
   }
 };
 
+var toSubXl = function () {
+  var nav = $("#navbarNav");
+  nav.detach().insertAfter("#navButton");
+};
+
+var toXl = function () {
+  var nav = $("#navbarNav");
+  nav.detach().insertAfter("#mobile-options");
+};
+
+var checkXl = function () {
+  //checking if no longer xl (< 1200px):
+  let XL_WIDTH = 1200;
+  if ($(window).width() < XL_WIDTH) {
+    toSubXl();
+  } else {
+    toXl();
+  }
+};
+
+var checkPage = function (checkTitle) {
+  var actualTitle = $("title").text();
+  return checkTitle == actualTitle;
+};
+
 var navButtonClick = function () {
   var navButton = $("#navButton");
   navButton.click(function () {
