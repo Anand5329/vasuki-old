@@ -94,6 +94,7 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
+        recolourNavbar();
         uniformCardHeight(".tab");
         createPipelineList("evaluation");
         createPipelineList("pre-evaluation");
@@ -164,7 +165,7 @@
       </button>
 
       <div class="collapse navbar-collapse navbar-font ml-auto" id="navbarNav">
-        <ul class="navbar-nav center">
+        <ul class="navbar-nav center accent-color">
           <li class="nav-item active navbar-tab d-block d-lg-none">
             <a class="nav-link" href="portfolio.html">Portfolio</a>
           </li>
@@ -221,154 +222,152 @@
     <!-- top -->
     <div class="container-fluid center head bg-img bg-img-highway" id="top">
       <h1 class="heading"></h1>
-      <!-- <div class="container-fluid center scroll-indicator d-none d-lg-block">
-        <i class="fas fa-chevron-down blink"></i>
-      </div> -->
-    </div>
-
-    <!-- tabs -->
-    <div class="container-fluid center overlap">
-      <ul class="nav nav-light nav-pills mb-3 light-bg row" role="tablist">
-        <li class="nav-item position-relative col-md-6 col-12 pad">
-          <a
-            class="
-              nav-link
-              card-block
-              accent-color
-              stretched-link
-              text-decoration-none
-            "
-            id="evaluation"
-            data-toggle="pill"
-            href="#evaluation-list"
-            role="tab"
-            aria-controls="evaluation-list"
-            aria-selected="false"
-          >
-            <div class="card tab accent-color">
-              <div class="card-body center">
-                <h5 class="card-title sub-head">Companies under evaluation</h5>
+      <!-- tabs -->
+      <div class="container-fluid center">
+        <ul class="nav nav-light nav-pills mb-3 light-bg row" role="tablist">
+          <li class="nav-item position-relative col-md-6 col-12 pad">
+            <a
+              class="
+                nav-link
+                card-block
+                accent-color
+                stretched-link
+                text-decoration-none
+              "
+              id="evaluation"
+              data-toggle="pill"
+              href="#evaluation-list"
+              role="tab"
+              aria-controls="evaluation-list"
+              aria-selected="false"
+            >
+              <div class="card tab accent-color">
+                <div class="card-body center">
+                  <h5 class="card-title sub-head">
+                    Companies under evaluation
+                  </h5>
+                </div>
               </div>
-            </div>
-          </a>
-        </li>
+            </a>
+          </li>
 
-        <li class="nav-item position-relative col-md-6 col-12 pad">
-          <a
-            class="
-              nav-link
-              card-block
-              accent-color
-              stretched-link
-              text-decoration-none
-            "
-            id="pre-evaluation"
-            data-toggle="pill"
-            href="#pre-evaluation-list"
-            role="tab"
-            aria-controls="pre-evaluation-list"
-            aria-selected="false"
-          >
-            <div class="card tab accent-color">
-              <div class="card-body center">
-                <h5 class="card-title sub-head">
-                  Companies under pre-evaluation
-                </h5>
+          <li class="nav-item position-relative col-md-6 col-12 pad">
+            <a
+              class="
+                nav-link
+                card-block
+                accent-color
+                stretched-link
+                text-decoration-none
+              "
+              id="pre-evaluation"
+              data-toggle="pill"
+              href="#pre-evaluation-list"
+              role="tab"
+              aria-controls="pre-evaluation-list"
+              aria-selected="false"
+            >
+              <div class="card tab accent-color">
+                <div class="card-body center">
+                  <h5 class="card-title sub-head">
+                    Companies under pre-evaluation
+                  </h5>
+                </div>
               </div>
-            </div>
-          </a>
-        </li>
+            </a>
+          </li>
 
-        <li class="nav-item position-relative col-md-6 col-12 pad">
-          <a
-            class="
-              nav-link
-              card-block
-              accent-color
-              stretched-link
-              text-decoration-none
-            "
-            id="early"
-            data-toggle="pill"
-            href="#early-list"
-            role="tab"
-            aria-controls="early-list"
-            aria-selected="false"
-          >
-            <div class="card tab accent-color">
-              <div class="card-body center">
-                <h5 class="card-title sub-head">
-                  Pipeline of early stage startups
-                </h5>
+          <li class="nav-item position-relative col-md-6 col-12 pad">
+            <a
+              class="
+                nav-link
+                card-block
+                accent-color
+                stretched-link
+                text-decoration-none
+              "
+              id="early"
+              data-toggle="pill"
+              href="#early-list"
+              role="tab"
+              aria-controls="early-list"
+              aria-selected="false"
+            >
+              <div class="card tab accent-color">
+                <div class="card-body center">
+                  <h5 class="card-title sub-head">
+                    Pipeline of early stage startups
+                  </h5>
+                </div>
               </div>
-            </div>
-          </a>
-        </li>
+            </a>
+          </li>
 
-        <li class="nav-item position-relative col-md-6 col-12 pad">
-          <a
-            class="
-              nav-link
-              card-block
-              accent-color
-              stretched-link
-              text-decoration-none
-            "
-            id="hold"
-            data-toggle="pill"
-            href="#hold-list"
-            role="tab"
-            aria-controls="hold-list"
-            aria-selected="false"
-          >
-            <div class="card tab accent-color">
-              <div class="card-body center">
-                <h5 class="card-title sub-head">Startups on hold</h5>
+          <li class="nav-item position-relative col-md-6 col-12 pad">
+            <a
+              class="
+                nav-link
+                card-block
+                accent-color
+                stretched-link
+                text-decoration-none
+              "
+              id="hold"
+              data-toggle="pill"
+              href="#hold-list"
+              role="tab"
+              aria-controls="hold-list"
+              aria-selected="false"
+            >
+              <div class="card tab accent-color">
+                <div class="card-body center">
+                  <h5 class="card-title sub-head">Startups on hold</h5>
+                </div>
               </div>
-            </div>
-          </a>
-        </li>
-      </ul>
+            </a>
+          </li>
+        </ul>
 
-      <div class="container-fluid tab-content">
-        <div
-          class="tab-pane fade pad accent-color"
-          id="evaluation-list"
-          role="tabpanel"
-          aria-labelledby="evaluation"
-        >
-          <h1 class="sub-head">Companies under evaluation</h1>
-          <div class="row center"></div>
-        </div>
+        <div class="container-fluid tab-content">
+          <div
+            class="tab-pane fade pad accent-color"
+            id="evaluation-list"
+            role="tabpanel"
+            aria-labelledby="evaluation"
+          >
+            <h1 class="sub-head">Companies under evaluation</h1>
+            <div class="row center"></div>
+          </div>
 
-        <div
-          class="tab-pane fade pad accent-color"
-          id="pre-evaluation-list"
-          role="tabpanel"
-          aria-labelledby="evaluation"
-        >
-          <h1 class="sub-head">Companies under pre-evaluation</h1>
-          <div class="row center"></div>
-        </div>
+          <div
+            class="tab-pane fade pad accent-color"
+            id="pre-evaluation-list"
+            role="tabpanel"
+            aria-labelledby="evaluation"
+          >
+            <h1 class="sub-head">Companies under pre-evaluation</h1>
+            <div class="row center"></div>
+          </div>
 
-        <div
-          class="tab-pane fade pad accent-color"
-          id="early-list"
-          role="tabpanel"
-          aria-labelledby="evaluation"
-        >
-          <h1 class="sub-head">Pipeline of early stage startups</h1>
-          <div class="row center"></div>
-        </div>
+          <div
+            class="tab-pane fade pad accent-color"
+            id="early-list"
+            role="tabpanel"
+            aria-labelledby="evaluation"
+          >
+            <h1 class="sub-head">Pipeline of early stage startups</h1>
+            <div class="row center"></div>
+          </div>
 
-        <div
-          class="tab-pane fade pad accent-color"
-          id="hold-list"
-          role="tabpanel"
-          aria-labelledby="evaluation"
-        >
-          <h1 class="sub-head">Startups on hold</h1>
-          <div class="row center"></div>
+          <div
+            class="tab-pane fade pad accent-color"
+            id="hold-list"
+            role="tabpanel"
+            aria-labelledby="evaluation"
+          >
+            <h1 class="sub-head">Startups on hold</h1>
+            <div class="row center"></div>
+          </div>
         </div>
       </div>
     </div>

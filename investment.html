@@ -110,20 +110,12 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        getThreshold();
-        fixFooter();
+        console.log("investment.html");
+        recolourNavbar();
+        setFooterMarginTop();
         resize();
         checkMobile();
       });
-
-      var getThreshold = function () {
-        // TODO: fix this: adding unwanted accent color.
-        return 10000;
-      };
-
-      var navButtonClick = function () {
-        //console.log("investment.navButtonClick");
-      };
 
       var createUpdateCard = function (title, link) {
         var container = $("<div></div>");
@@ -141,10 +133,6 @@
         container.append(card);
 
         return container;
-      };
-
-      var fixFooter = function () {
-        $("footer").css("margin-top", "10rem");
       };
     </script>
   </head>
@@ -243,35 +231,30 @@
       class="container-fluid center head bg-img bg-img-network bottom-border"
       id="top"
     >
-      <h1 class="heading"></h1>
-      <!-- <div class="container-fluid center scroll-indicator d-none d-lg-block">
-        <i class="fas fa-chevron-down blink"></i>
-      </div> -->
-    </div>
+      <div class="container-fluid center" id="meetings">
+        <h1 class="heading pad">Meetings</h1>
+        <div class="row center pad">
+          <div class="col-4">
+            <h4 class="mini-head">Meeting #n</h4>
+          </div>
+          <div class="col-4">
+            <h4 class="mini-head">Date</h4>
+          </div>
+          <div class="col center">
+            <a class="mini-head" href="investment_meeting.html">Read More</a>
+          </div>
+        </div>
 
-    <div class="container-fluid center overlap" id="meetings">
-      <h1 class="heading pad">Meetings</h1>
-      <div class="row center pad">
-        <div class="col-4">
-          <h4 class="mini-head">Meeting #n</h4>
-        </div>
-        <div class="col-4">
-          <h4 class="mini-head">Date</h4>
-        </div>
-        <div class="col center">
-          <a class="mini-head" href="investment_meeting.html">Read More</a>
-        </div>
-      </div>
-
-      <div class="row center pad">
-        <div class="col-4">
-          <h4 class="mini-head">Meeting #m</h4>
-        </div>
-        <div class="col-4">
-          <h4 class="mini-head">Date</h4>
-        </div>
-        <div class="col center">
-          <a class="mini-head" href="investment_meeting.html">Read More</a>
+        <div class="row center pad">
+          <div class="col-4">
+            <h4 class="mini-head">Meeting #m</h4>
+          </div>
+          <div class="col-4">
+            <h4 class="mini-head">Date</h4>
+          </div>
+          <div class="col center">
+            <a class="mini-head" href="investment_meeting.html">Read More</a>
+          </div>
         </div>
       </div>
     </div>

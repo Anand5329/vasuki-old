@@ -70,6 +70,12 @@
         border: 1px black solid;
       }
     </style>
+
+    <script tyoe="text/javascript">
+      $(document).ready(function () {
+        recolourNavbar();
+      });
+    </script>
   </head>
 
   <!-- TODO: transition effects for bg gradients -->
@@ -78,7 +84,13 @@
   <body>
     <!-- navbar -->
     <nav
-      class="navbar navbar-dark navbar-expand-lg justify-content-between sticky-top zero-vertical-pad fix-height"
+      class="
+        navbar navbar-dark navbar-expand-lg
+        justify-content-between
+        sticky-top
+        zero-vertical-pad
+        fix-height
+      "
     >
       <a class="navbar-brand navbar-font mr-auto head" href="design3.1.html">
         <h1 class="brand"><strong>Vasuki</strong></h1>
@@ -106,7 +118,7 @@
       </button>
 
       <div class="collapse navbar-collapse navbar-font ml-auto" id="navbarNav">
-        <ul class="navbar-nav center">
+        <ul class="navbar-nav center accent-color">
           <li class="nav-item active navbar-tab d-block d-lg-none">
             <a class="nav-link" href="investment.html">Investment Committee</a>
           </li>
@@ -219,20 +231,19 @@
         </a>
         <div class="row pad center collapse collapse-company" id="all"></div>
       </div>
-
-      <footer class="stay-bottom">
-        <div class="container-fluid accent-color white">
-          <div class="row center wrap pad">
-            <h2 class="sub-head pad">Want to reach us?</h2>
-            <div class="col-sm-12 col-md-4 pad">
-              <p>
-                <strong>Email:</strong>
-                <a href="mailto:vasukigp@vasuki.eu">vasukigp@vasuki.eu</a>
-              </p>
-            </div>
+    </div>
+    <footer class="stay-bottom">
+      <div class="container-fluid accent-color white">
+        <div class="row center wrap pad">
+          <h2 class="sub-head pad">Want to reach us?</h2>
+          <div class="col-sm-12 col-md-4 pad">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:vasukigp@vasuki.eu">vasukigp@vasuki.eu</a>
+            </p>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

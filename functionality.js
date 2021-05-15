@@ -11,7 +11,7 @@ let colourClasses = ["solid-bg", "accent-color-green"];
 let accentColour = "accent-color";
 
 $(document).ready(function () {
-  recolourNavbar();
+  console.log("functionality.js");
   uniformTabHeight();
   resize();
   navButtonClick();
@@ -125,9 +125,21 @@ var getThreshold = function () {
   // double navHeight: to make sure change happens
   // before user scrolls past the heading.
   var threshold = headingPos; //- 2 * navHeight;
-  console.log(threshold);
+  //console.log(threshold);
 
   return threshold;
+};
+
+var getScroll = function () {
+  var triggerBuffer;
+  if ($("body").hasClass("mobile")) {
+    triggerBuffer = 160; //10rem
+    // console.log(160);
+  } else {
+    triggerBuffer = 64; //4rem
+    // console.log(64);
+  }
+  return $(document).scrollTop() + triggerBuffer;
 };
 
 var recolourNavbar = function () {
@@ -137,13 +149,16 @@ var recolourNavbar = function () {
   var threshold = getThreshold();
 
   // if already past, threshold, change instantaneously
-  if (doc.scrollTop() > threshold) {
+  if (getScroll() > threshold) {
     nav.addClass(accentColour);
   }
 
   doc.scroll(function () {
+    // console.log("scrolling: " + doc.scrollTop());
+    // console.log("threshold: " + getThreshold());
     // pixels that are scrolled down.
-    var scroll = doc.scrollTop();
+    var scroll = getScroll();
+
     if (scroll > threshold) {
       nav.addClass(accentColour, transitionTime);
       // console.log("Changed colour.");
@@ -152,6 +167,24 @@ var recolourNavbar = function () {
       nav.removeClass(accentColour, transitionTime);
     }
     // console.log(scroll - threshold);
+  });
+};
+
+var navButtonClick = function () {
+  var navButton = $("#navButton");
+  var isClosing = false;
+  navButton.click(function () {
+    $(".navbar").addClass(accentColour, transitionTime);
+    // console.log("Class added");
+    var threshold = getThreshold();
+    console.log("Threshold: " + threshold);
+    console.log("Scroll: " + getScroll());
+    // if before threshold, hide colouring.
+    if (getScroll() < threshold && isClosing) {
+      $(".navbar").removeClass(accentColour, transitionTime);
+      //console.log("Class toggled.");
+    }
+    isClosing = !isClosing;
   });
 };
 
@@ -215,21 +248,6 @@ var checkPage = function (checkTitle) {
   return checkTitle == actualTitle;
 };
 
-var navButtonClick = function () {
-  var navButton = $("#navButton");
-  navButton.click(function () {
-    $(".navbar-nav").addClass(accentColour, transitionTime);
-    // console.log("Class added");
-    var threshold = getThreshold();
-    // console.log(threshold);
-    // if before threshold, hide colouring.
-    if ($(document).scrollTop() < threshold) {
-      $(".navbar").toggleClass(accentColour, transitionTime);
-      //console.log("Class toggled.");
-    }
-  });
-};
-
 var aboutHover = function (section) {
   var about = $(".about");
   var ul = createList(section);
@@ -277,4 +295,8 @@ var getCurrentItemTopCarousel = function () {
   var active = $("#top-carousel>.carousel-inner>.active");
   // console.log(active.text());
   return active;
+};
+
+var setFooterMarginTop = function (distance = "10rem") {
+  $("footer").css("margin-top", distance);
 };

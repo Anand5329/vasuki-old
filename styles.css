@@ -8,6 +8,8 @@ html {
 
 #top {
   padding-top: 5rem;
+  display: table;
+  width: 100%;
 }
 
 .center {

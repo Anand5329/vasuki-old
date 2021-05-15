@@ -123,49 +123,24 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        getThreshold();
-        fixFooter();
+        recolourNavbar();
+        setFooterMarginTop();
         resize();
         checkMobile();
       });
-
-      var getThreshold = function () {
-        // TODO: fix this: adding unwanted accent color.
-        return 10000;
-      };
-
-      var navButtonClick = function () {
-        //console.log("investment.navButtonClick");
-      };
-
-      var createUpdateCard = function (title, link) {
-        var container = $("<div></div>");
-        container.addClass(["col-lg-6", "col-12", "pad"]);
-
-        var card = $("<div></div>");
-        card.addClass("card");
-
-        var anchor = $("<a></a>");
-        anchor.addClass("mini-head");
-        anchor.attr("href", link);
-        anchor.append(title);
-
-        card.append(anchor);
-        container.append(card);
-
-        return container;
-      };
-
-      var fixFooter = function () {
-        $("footer").css("margin-top", "10rem");
-      };
     </script>
   </head>
   <body>
     <!-- navbar -->
     <!-- TODO: fix nav elements not aligned at center line when navButton is pressed. -->
     <nav
-      class="navbar navbar-dark navbar-expand-lg justify-content-between sticky-top zero-vertical-pad fix-height"
+      class="
+        navbar navbar-dark navbar-expand-lg
+        justify-content-between
+        sticky-top
+        zero-vertical-pad
+        fix-height
+      "
     >
       <a class="navbar-brand navbar-font mr-auto head" href="design3.1.html">
         <strong>Vasuki</strong></a
@@ -250,40 +225,35 @@
       class="container-fluid center head bg-img bg-img-network bottom-border"
       id="top"
     >
-      <h1 class="heading"></h1>
-      <!-- <div class="container-fluid center scroll-indicator d-none d-lg-block">
-        <i class="fas fa-chevron-down blink"></i>
-      </div> -->
-    </div>
-
-    <div class="container-fluid center overlap" id="meetings">
-      <h1 class="heading pad">Meeting #n</h1>
-      <table>
-        <tr>
-          <th>Date</th>
-          <td>11.11.11</td>
-        </tr>
-        <tr>
-          <th>Agenda</th>
-          <td>...</td>
-        </tr>
-        <tr>
-          <th>Background of meeting</th>
-          <td>
-            <a href=""><i class="icon far fa-file-pdf"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <th>Minutes of the meeting</th>
-          <td>
-            <a href=""><i class="icon far fa-file-pdf"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <th>Voting result</th>
-          <td>...</td>
-        </tr>
-      </table>
+      <div class="container-fluid center" id="meetings">
+        <h1 class="heading pad">Meeting #n</h1>
+        <table>
+          <tr>
+            <th>Date</th>
+            <td>11.11.11</td>
+          </tr>
+          <tr>
+            <th>Agenda</th>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th>Background of meeting</th>
+            <td>
+              <a href=""><i class="icon far fa-file-pdf"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th>Minutes of the meeting</th>
+            <td>
+              <a href=""><i class="icon far fa-file-pdf"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th>Voting result</th>
+            <td>...</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <!-- footer -->

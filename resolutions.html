@@ -121,49 +121,24 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        getThreshold();
-        fixFooter();
+        recolourNavbar();
+        setFooterMarginTop();
         resize();
         checkMobile();
       });
-
-      var getThreshold = function () {
-        // TODO: fix this: adding unwanted accent color.
-        return 10000;
-      };
-
-      var navButtonClick = function () {
-        //console.log("resolution.navButtonClick");
-      };
-
-      var createUpdateCard = function (title, link) {
-        var container = $("<div></div>");
-        container.addClass(["col-lg-6", "col-12", "pad"]);
-
-        var card = $("<div></div>");
-        card.addClass("card");
-
-        var anchor = $("<a></a>");
-        anchor.addClass("mini-head");
-        anchor.attr("href", link);
-        anchor.append(title);
-
-        card.append(anchor);
-        container.append(card);
-
-        return container;
-      };
-
-      var fixFooter = function () {
-        $("footer").css("margin-top", "10rem");
-      };
     </script>
   </head>
   <body>
     <!-- navbar -->
     <!-- TODO: fix nav elements not aligned at center line when navButton is pressed. -->
     <nav
-      class="navbar navbar-dark navbar-expand-lg justify-content-between sticky-top zero-vertical-pad fix-height"
+      class="
+        navbar navbar-dark navbar-expand-lg
+        justify-content-between
+        sticky-top
+        zero-vertical-pad
+        fix-height
+      "
     >
       <a class="navbar-brand navbar-font mr-auto head" href="design3.1.html">
         <strong>Vasuki</strong></a
@@ -251,54 +226,51 @@
       id="top"
     >
       <h1 class="heading"></h1>
-      <!-- <div class="container-fluid center scroll-indicator d-none d-lg-block">
-        <i class="fas fa-chevron-down blink"></i>
-      </div> -->
-    </div>
 
-    <!-- collapsing sections -->
+      <!-- collapsing sections -->
 
-    <div class="container-fluid wrap pad overlap">
-      <a
-        class="btn accent-color center white-border"
-        data-toggle="collapse"
-        href="#special"
-        role="button"
-        aria-expanded="false"
-        aria-controls="special"
-      >
-        <h2 class="sub-head center">Special</h2>
-      </a>
-      <div class="row pad center collapse collapse-resolution" id="special">
-        <div class="col-lg-6 col-12 pad">
-          <div class="card">
-            <a class="mini-head" href="resolution_view.html">Date</a>
+      <div class="container-fluid wrap pad">
+        <a
+          class="btn accent-color center white-border"
+          data-toggle="collapse"
+          href="#special"
+          role="button"
+          aria-expanded="false"
+          aria-controls="special"
+        >
+          <h2 class="sub-head center">Special</h2>
+        </a>
+        <div class="row pad center collapse collapse-resolution" id="special">
+          <div class="col-lg-6 col-12 pad">
+            <div class="card">
+              <a class="mini-head" href="resolution_view.html">Date</a>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-12 pad">
-          <div class="card">
-            <a class="mini-head" href="resolution_view.html">Date</a>
+          <div class="col-lg-6 col-12 pad">
+            <div class="card">
+              <a class="mini-head" href="resolution_view.html">Date</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container-fluid wrap pad">
-      <a
-        class="btn accent-color center white-border"
-        data-toggle="collapse"
-        href="#ordinary"
-        role="button"
-        aria-expanded="false"
-        aria-controls="ordinary"
-      >
-        <h2 class="sub-head center">Ordinary</h2>
-      </a>
-      <div
-        class="row pad center collapse collapse-resolution"
-        id="ordinary"
-      ></div>
+      <div class="container-fluid wrap pad">
+        <a
+          class="btn accent-color center white-border"
+          data-toggle="collapse"
+          href="#ordinary"
+          role="button"
+          aria-expanded="false"
+          aria-controls="ordinary"
+        >
+          <h2 class="sub-head center">Ordinary</h2>
+        </a>
+        <div
+          class="row pad center collapse collapse-resolution"
+          id="ordinary"
+        ></div>
+      </div>
     </div>
 
     <!-- footer -->

@@ -154,38 +154,9 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        getThreshold();
-        fixFooter();
+        recolourNavbar();
+        setFooterMarginTop();
       });
-
-      var getThreshold = function () {
-        // TODO: fix this: adding unwanted accent color.
-        return 10000;
-      };
-
-      var navButtonClick = function () {};
-
-      var createUpdateCard = function (title, link) {
-        var container = $("<div></div>");
-        container.addClass(["col-lg-6", "col-12", "pad"]);
-
-        var card = $("<div></div>");
-        card.addClass("card");
-
-        var anchor = $("<a></a>");
-        anchor.addClass("mini-head");
-        anchor.attr("href", link);
-        anchor.append(title);
-
-        card.append(anchor);
-        container.append(card);
-
-        return container;
-      };
-
-      var fixFooter = function () {
-        $("footer").css("margin-top", "10rem");
-      };
     </script>
   </head>
   <body>
