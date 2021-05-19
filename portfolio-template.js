@@ -17,6 +17,7 @@ let companyA = {
   status: "current",
   pipeline: "evaluation",
   pdf: "example.pdf",
+  files: ["example1.pdf", "example2.pdf"],
   logo: "Pictures/logo.png",
   colour1: "#000",
   colour2: "#000",
@@ -29,6 +30,7 @@ let companyB = {
   status: "current",
   pipeline: "pre-evaluation",
   pdf: "example.pdf",
+  files: ["example1.pdf", "example2.pdf"],
   logo: "Pictures/logo.png",
   colour1: "#000",
   colour2: "#000",
@@ -41,6 +43,7 @@ let companyC = {
   status: "current",
   pipeline: "early",
   pdf: "example.pdf",
+  files: ["example1.pdf", "example2.pdf"],
   logo: "Pictures/logo.png",
   colour1: "#000",
   colour2: "#000",
@@ -52,24 +55,24 @@ var doc = $(document);
 
 doc.ready(function () {
   //console.log("Running");
-  createCompanyList("current");
-  createCompanyList("past");
-  createCompanyList("all");
-  uniformCompanyHeight();
+  // createCompanyList("current");
+  // createCompanyList("past");
+  // createCompanyList("all");
+  // uniformCompanyHeight();
   //console.log(companyList);
   // setTimeout(function () {
   //   uniformCardHeight(".company");
   // }, 4000);
   // window.onload = function () {
   //   console.log("uniforming");
-
   //   uniformCardHeight(".company");
   // };
 });
 
-var createCompanyList = function (category, page = null, link = null) {
+var createCompanyList = function (category, page = "", link = null) {
   var id = "#" + category;
-  if (page != null) {
+  //console.log("Page: " + page);
+  if (page != "") {
     id = id + "-" + page;
   }
   var currentContainer = $(id);
@@ -114,15 +117,29 @@ var getCompanyTemplate = function (company, page = null, link = null) {
   //card-title
   var cardTitle = $("<h5></h5>");
   cardTitle.addClass("card-title");
+
   var cardLink = $("<a></a>");
-  if (page == null || page == "portfolio") {
-    cardLink.attr("href", company.pdf);
-    cardLink.attr("target", "_blank");
+  var linkList = $("<ul></ul>");
+  //console.log("isPortfolio: " + (page == "portfolio"));
+  //console.log("isNull: " + (page == null));
+  if (page == "" || page == "portfolio") {
+    company.files.forEach((item, i) => {
+      var anchor = $("<a></a>");
+      anchor.attr("href", item);
+      anchor.attr("target", "_blank");
+      anchor.attr("data-toggle", "tooltip");
+      anchor.attr("data-placement", "bottom");
+      anchor.attr("title", "name");
+      anchor.append($("<i class='icon far fa-file-pdf'></i>"));
+      linkList.append($("<li class='icon-pad'></li>").append(anchor));
+    });
+    cardTitle.append(company.name);
   } else {
     cardLink.attr("href", link + company.portfolio);
+    cardLink.append(company.name);
+    cardTitle.append(cardLink);
   }
-  cardLink.append(company.name);
-  cardTitle.append(cardLink);
+
   //card-subtitle
   var cardSubtitle = $("<h6></h6>");
   cardSubtitle.addClass("card-subtitle");
@@ -148,6 +165,9 @@ var getCompanyTemplate = function (company, page = null, link = null) {
   // adding title, subtitle to card-body
   cardBody.append(cardTitle);
   cardBody.append(cardSubtitle);
+  if (page == "" || page == "portfolio") {
+    cardBody.append(linkList);
+  }
   //desc not needed.
   //cardBody.append(cardText);
 
